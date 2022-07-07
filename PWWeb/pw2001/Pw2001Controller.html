@@ -1,0 +1,268 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title></title>
+
+<script type="text/javascript" src="../scripts/action.js"></script>
+<script type="text/javascript" src="../scripts/oxml.js"></script>
+<script type="text/javascript" src="../scripts/common/strfunc.js"></script>
+<script type="text/javascript" src="../scripts/common/event.js"></script>
+<script type="text/javascript" src="../scripts/common/form.js"></script>
+<script type="text/javascript" src="../scripts/common/Check.js"></script>
+<script type="text/javascript" src="../scripts/common/FormEvent.js"></script>
+<script type="text/javascript" src="../scripts/common/StrUtil.js"></script>
+<script type="text/javascript" src="../scripts/common/message.js"></script>
+<script type="text/javascript" src="../scripts/common/window.js"></script>
+<script type="text/javascript" src="../scripts/common/date-picker.js"></script>
+<script type="text/javascript" src="../scripts/common/MM_function.js"></script>
+<script type="text/javascript" src="../scripts/dialog.js"></script>
+<script type="text/javascript" src="../scripts/result.js"></script>
+<script type="text/javascript" src="../scripts/drag.js"></script>
+<script type="text/javascript" src="../scripts/layer.js"></script>
+<script type="text/javascript" src="../scripts/main.js"></script>
+<script type="text/javascript" src="../scripts/htmlcontrol/dynamicddl.js"></script>
+<script type="text/javascript" src="../scripts/htmlcontrol/doubleselect.js"></script>
+<script type="text/javascript" src="../scripts/eaim.js"></script>
+
+<script type="text/javascript" src="../scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../scripts/ajaxfileupload.js"></script>
+<script type="text/javascript" src="../scripts/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../scripts/tmweb.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type='text/javascript'>
+var mode='';
+var DEBUG=false;
+</script>
+
+
+
+</head>
+
+<html>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script src="../js/Lock.js"></script>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<script type="text/javascript">
+
+function doChangeSubject(){
+	
+	clearCombBox();
+	var form = document.mainForm;
+	count = 0 ;
+	
+	if (form.Class_code.value=='308'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','308001');
+		count++;
+	}
+	
+	if (form.Class_code.value=='309'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','309001');
+		count++;
+	}
+	
+	if (form.Class_code.value=='310'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','310001');
+		count++;
+	}
+	
+	if (form.Class_code.value=='311'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','311001');
+		count++;
+	}
+	
+	if (form.Class_code.value=='t303'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','t30301');
+		count++;
+	}
+	
+	if (form.Class_code.value=='t304'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','t30401');
+		count++;
+	}
+	
+	if (form.Class_code.value=='t305'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','t30501');
+		count++;
+	}
+	
+	if (form.Class_code.value=='t306'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','t30601');
+		count++;
+	}
+	
+	if (form.Class_code.value=='t307'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','t30701');
+		count++;
+	}
+	
+	if (form.Class_code.value=='t312'){
+		form.Subject_code.options[count] = new Option(' 綜合科目','31200001');
+		count++;
+	}
+	
+}
+
+//清除select的選項
+function clearCombBox() {
+    var sc1Length = document.mainForm.Subject_code.length;
+    for (i = 0; i < sc1Length; i++) {
+    	document.mainForm.Subject_code.options.remove(0);
+    }
+}
+
+function doSubmit(){
+	var Class_code = document.mainForm.Class_code.value;
+	var Subject_code = document.mainForm.Subject_code.value;
+	if(Class_code =='' || Subject_code ==''){
+		alert("請選擇類科及科目！");
+		return;
+	}
+	//alert("Class_code="+Class_code+";Subject_code="+Subject_code);
+	//document.mainForm.action='../portal/default.html?isExamSimulate=true&Class_code='+Class_code+'&Subject_code='+Subject_code;
+	//document.mainForm.submit();
+
+	window.open ('../portal/index.html?isExamSimulate=true&Class_code='+Class_code+'&Subject_code='+Subject_code, 'newwindow', 'height=768, width=1024, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no');
+
+}
+
+</script>
+
+
+</head>
+
+<body>
+<div align="center">
+<form name="mainForm" method="post" action="">
+<table width="750" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+	<p align="left">＞＞選擇類科科目</td>
+  </tr>
+  <tr>
+    <td>
+	<div align="center">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="15"><img src="../image/moex/admin_main_01.gif" width="15" height="15"></td>
+        <td width="272" background="../image/moex/admin_main_02.gif">&nbsp;</td>
+        <td width="13"><img src="../image/moex/admin_main_03.gif" width="13" height="15"></td>
+      </tr>
+      <tr>
+        <td width="15" background="../image/moex/admin_main_04.gif">&nbsp;</td>
+        <td width="100%" align=center>
+		<div align="center">
+		<table width="722" border="0" cellpadding="2" cellspacing="2" id="table1">
+          	<tr class="table_content">
+            <td class="table_head" width="706" colspan="2">
+			請選擇類科科目</td>
+          </tr>
+          <tr class="table_content" onMouseOver="this.className='table_content_o';this.style.cursor='pointer'" onMouseOut="this.className='table_content'">
+            <td width="10%" align="right">類科：</td>
+            <td width="90%" align="left">
+					<select size="1" name="Class_code" onchange="doChangeSubject();">
+						<option></option>
+                      	
+                        <option value="308">醫事放射師</option>
+                        
+                        <option value="309">物理治療師</option>
+                        
+                        <option value="310">藥師</option>
+                        
+                        <option value="311">醫事檢驗師</option>
+                        
+                        <option value="t303">牙醫師</option>
+                        
+                        <option value="t304">助產師</option>
+                        
+                        <option value="t305">職能治療師</option>
+                        
+                        <option value="t306">呼吸治療師</option>
+                        
+                        <option value="t307">獸醫師</option>
+                        
+                        <option value="t312">醫師</option>
+                        
+                      </select>
+             </td> 
+             </tr>
+			<tr class="table_content2" onMouseOver="this.className='table_content_o';this.style.cursor='pointer'" onMouseOut="this.className='table_content2'">
+            <td width="10%" align="right">
+			科目：</td>
+            <td width="90%" align="left">
+			<select size="1" name="Subject_code"> 
+                        <option></option>
+                      </select>
+             </td>
+          </tr>
+			<tr class="table_content" onMouseOver="this.className='table_content_o';this.style.cursor='pointer'" onMouseOut="this.className='table_content2'">
+            <td width="708" align="right" colspan="2">
+			<p align="center"> 
+					  <input name="Submit1" type="button" class="formBtn" onclick="doSubmit();" onMouseOver="this.className='formBtnOver';this.style.cursor='pointer'" onMouseOut="this.className='formBtn'" value="確  定" style="font-family: sans-serif; font-size: 10pt; float:center"></td>
+          </tr>
+          </table></div>
+		</td>
+        <td width="13" background="../image/moex/admin_main_06.gif">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="15"><img src="../image/moex/admin_main_07.gif" width="15"></td>
+        <td background="../image/moex/admin_main_08.gif"></td>
+        <td width="13"><img src="../image/moex/admin_main_09.gif" width="13"></td>
+      </tr>
+    </table></div>
+	</td>
+  </tr>
+  </table>
+</form>
+</div>
+</body>
+</html>

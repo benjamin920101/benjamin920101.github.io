@@ -1,0 +1,313 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #003F60;
+	font-family: Arial, Helvetica, sans-serif;
+	background:url(../image/moex/bg.gif);
+}
+tr{
+	font-size: 12px;
+}
+.pixeltable{
+	border:1px solid #d0d0d0;
+}
+a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #003F60;
+	text-decoration: none;
+}
+a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #003F60;
+	text-decoration: none;
+}
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: underline;
+}
+a:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #003F60;
+	text-decoration: none;
+}
+a.topMenu:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#355F34;
+	text-decoration: none;
+}
+a.topMenu:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #1d9771;
+	text-decoration: none;
+}
+a.topMenu:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.topMenu:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #1d9771;
+	text-decoration: none;
+}
+.topMenu{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#355F34;
+	text-decoration: none;
+}
+.topMenu_over{
+	background:#4E8194;
+	font-size: 12px;
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.top{
+	color:#000;
+	padding-top:20px;
+}
+.title{
+	color:#B41010;
+	font-size:11pt;
+	height:30px;
+	line-height: 15px;
+	padding-top: 6px;
+	padding-left:15px;
+	font-weight: bold;
+	}
+.title_path{
+	color:#1d9771;
+	font-size:11pt;
+	height:30px;
+	line-height: 18px;
+	padding-left:10px;
+	padding-top:10px;
+	}
+.table_head{
+	background:url(../image/moex/tableHead_bg.gif);
+	color:#FFFFFF;
+	height: 33px;
+	vertical-align: middle;
+	padding-left:10px;
+	}
+.table_head2{
+	background-image: url(../image/content_tableHead2.gif);
+	color:#3C3C3C;
+	height: 26px;
+	line-height: 15px;
+	vertical-align: middle;
+	padding-left: 6px;
+	}
+.table_content{
+	background-color:#cdffe3;
+	font-size:12px;
+	color:#444444;
+	height: 30px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding-left: 10px;
+	}
+.table_content2{
+	background-color: #eeeeee;
+	font-size:12px;
+	color:#444444;
+	height: 30px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding-left: 10px;
+	}
+.table_content3{
+	background-color: #eeeeee;
+	font-size:12px;
+	color:#444444;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	padding-left: 10px;
+	}	
+.table_content_o{
+	background-color:#026870;
+	font-size:12px;
+	color:#FFFFFF;
+	height: 30px;
+	line-height: 20px;
+	vertical-align: middle;
+	}
+.dataColorC01 {
+	background-color:#e8f5f7;
+	color:#046279;
+	height: 30px;
+	vertical-align:middle;
+}
+.dataColorC02 {
+	background-color:#f3f3f3;
+	color:#046279;
+	height: 30px;
+	vertical-align:middle;
+}
+.menu_title{
+	color:#6ee8ff;
+	height: 25px;
+	width: 167px;
+	text-align: left;
+	line-height: 15px;
+	vertical-align: middle;
+	padding-top: 6px;
+	padding-left: 10px;
+	}
+.menu{
+	font-size:12px;
+	height: 28px;
+	text-align: left;
+	line-height: 14px;
+	vertical-align: middle;
+	padding-left: 8px;
+	color:#757575;
+	}
+.menu_o{
+	font-size:12px;
+    background-color: #3CC3DC;
+	color:#FFFFFF;
+	height: 28px;
+	text-align: center;
+	line-height: 14px;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 8px;
+	cursor: hand;
+	background:url(../image/moex/left_menuOver.gif);
+	}
+.menu_o2{
+	font-size:12px;
+    background-color: #3CC3DC;
+	color:#FFFFFF;
+	height: 30px;
+	width: 173px;
+	padding-left: 30px;
+	text-align: center;
+	line-height: 15px;
+	text-align: left;
+	vertical-align: middle;
+	background-image:url(../image/menu_icon03.jpg);
+	background-repeat:no-repeat;
+	background-position:30px 10px;
+	}
+a.pageLink:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #929292;
+	text-decoration: none;
+	width: 10px;
+}
+a.pageLink:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #929292;
+	text-decoration: none;
+	width: 10px;
+}
+a.pageLink:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: underline;
+	width: 10px;
+}
+a.pageLink:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #929292;
+	text-decoration: none;
+	width: 10px;
+}
+.pageSelect {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+.pageNum {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #E97E00;
+}
+.formBtn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	letter-spacing:5px;
+	background-color: #FFFFFF;
+	background-image: url(../image/moex/btn.gif);
+	background-repeat: repeat-x;
+	height: 25px;
+	border: 1px solid #57b394;
+}
+.formBtnOver {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	letter-spacing:5px;
+	background-color: #FFFFFF;
+	background-image: url(../image/moex/btn_o.gif);
+	background-repeat: repeat-x;
+	height: 25px;
+	border: 1px solid #57b394;
+}
+/*¿é¤JÄæ¦ì*/
+.formInput {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #9B9B9B;
+	background-image:url(../image/moex/login_input01.gif);
+	height: 39px;
+	width: 227px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	padding-left:10px;
+	padding-top:10px;
+}
+.formInput2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #9B9B9B;
+	background-image:url(../image/moex/login_input02.gif);
+	height: 39px;
+	width: 447px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	padding-left:10px;
+	padding-top:10px;
+}
+.copyright{
+	background-color:#f0f0f0;
+	padding-left:25px;
+	color:#7f7f7f;
+	font-size:12px;
+	height:110px;
+	text-align:center;
+	vertical-align:middle;
+}
