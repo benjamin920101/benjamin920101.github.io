@@ -1,0 +1,120 @@
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="../scripts/tmweb.js"></script>
+<script type="text/javascript" src="../scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.blockUI.js"></script>
+
+</head>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script>
+//開考時間倒數
+function setExamStartCountdown(timer,preState)
+{
+	try{
+		window.parent.topFrame.TimeCountdown = timer;
+		window.parent.topFrame.preState = preState;
+	}catch(err){
+		//alert("setExamStartCountdown err!");
+	}	
+}
+//可提前交卷時間倒數
+function setExamOverTimeCountdown(timer)
+{
+	try{
+		window.parent.topFrame.examOverTimeCountdown = timer;
+	}catch(err){
+		//alert("setExamOverTimeCountdown err!");
+	}
+}
+
+//訊息通知
+function setShowNewsNotice()
+{
+	try{
+		window.parent.topFrame.showNewsNotice();
+	}catch(err){
+		//alert("setExamOverTimeCountdown err!");
+	}
+}
+
+
+//結束時間倒數
+function setForceOverTimeCountdown(timer,preState)
+{
+	try{
+		window.parent.topFrame.TimeCountdown = timer;
+		window.parent.topFrame.preState = preState;
+	}catch(err){
+		//alert("setForceOverTimeCountdown err!");
+	}
+}
+
+//成績導回登入頁倒數
+function setReturnLogineCountdown(timer)
+{
+	try{
+		window.parent.mainFrame.returnLogineCountdown = timer;
+	}catch(err){
+		//alert("setReturnLogineCountdown err!");
+	}
+}
+
+function setIt(timer)
+{
+	try{
+		window.parent.topFrame.It = timer;
+	}catch(err){
+		//alert("setIt err!");
+	}
+}
+
+function doExamStart(frm)
+{
+	//tmweb.ajaxStateFlow(form1, {event: 'doExamStart'});
+	tmweb.ajaxStateFlow(form1, 'doExamStart');
+}
+
+function doExamEnd(frm)
+{
+	//tmweb.ajaxStateFlow(frm, {event: 'doTimeUpEndExam'});
+	tmweb.ajaxStateFlow(frm, 'doTimeUpEndExam');
+}
+
+function doForceOver()
+{
+	//tmweb.ajaxStateFlow(form1, {event: 'doForceOverExam'});
+	tmweb.ajaxStateFlow(form1, 'doForceOverExam');
+}
+
+function setDelayTime(delayTime)
+{
+
+	window.parent.topFrame.setDelayTime(delayTime);
+	document.form1.DelayTime.value==delayTime;	
+}
+
+function doReturnLogin()
+{
+	//tmweb4.ajaxADHoc(form1, {command: 'doReturnLogin'});
+}
+
+</script>
+
+<body>
+CODE
+<form name='form1'>
+<input type='hidden' name='DelayTime'>
+</form>
+</body>
+</html>

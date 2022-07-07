@@ -1,0 +1,132 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>考選部國家考試電腦化測驗系統</title>
+<link href="CSS/Level3_1.css" rel="stylesheet" type="text/css">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="../scripts/tmweb.js"></script>
+<script type="text/javascript" src="../scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.blockUI.js"></script>
+
+</head>
+<script src="../js/Lock.js"></script>
+<script>
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+//-->
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+	function showEndExamConfirm(){
+/*
+		document.getElementById('showMsg').innerHTML="<p><font color=blue><b>注意：結束作答視同繳卷</b></font></p><p><font color=blue><b>是否結束本次應考？</b></font></p>"+
+		"<p><a href='#' onClick='EndExamconfirm1();' onMouseOut='MM_swapImgRestore()' onMouseOver=\"MM_swapImage('Image8','','images/btn_yes_o.gif',1)\">"+
+		  "<img src='images/btn_yes.gif' name='Image8' width='101' height='42' border='0'></a>"+
+		  "<a href='#' onClick='CancelExamconfirm();' onMouseOut='MM_swapImgRestore()' onMouseOver=\"MM_swapImage('Image9','','images/btn_no_o.gif',1)\">"+
+		  "<img src='images/btn_no.gif' name='Image9' width='101' height='42' border='0'></a>"+
+		  "</p>";
+*/
+		document.getElementById('showMsg').innerHTML="<p><font color=blue><b>注意：結束作答視同繳卷</b></font></p><p><font color=blue><b>是否結束本次應考？</b></font></p>"+
+		"<p><a href='#' onClick='EndExamconfirm1();' onMouseOut='MM_swapImgRestore()' onMouseOver=\"MM_swapImage('Image8','','images/ok_btn_o.gif',1)\">"+
+		  "<img src='images/ok_btn.gif' name='Image8' width='101' height='42' border='0'></a>"+
+		  "<a href='#' onClick='CancelExamconfirm();' onMouseOut='MM_swapImgRestore()' onMouseOver=\"MM_swapImage('Image9','','images/cancel_btn_o.gif',1)\">"+
+		  "<img src='images/cancel_btn.gif' name='Image9' width='101' height='42' border='0'></a>"+
+		  "</p>";		  
+	}
+
+	function EndExamconfirm1(){
+/*		
+		document.getElementById('showMsg').innerHTML="<p><font color=blue><b>注意：結束作答視同繳卷</b></font></p><p><font color=blue><b>再次確認是否結束本次應考？</b></font></p>"+
+		"<p><a href='#' onClick='realEndExam();' onMouseOut='MM_swapImgRestore()' onMouseOver=\"MM_swapImage('Image8','','images/btn_yes_o.gif',1)\">"+
+		  "<img src='images/btn_yes.gif' name='Image8' width='101' height='42' border='0'></a>"+
+		  "<a href='#' onClick='CancelExamconfirm();' onMouseOut='MM_swapImgRestore()' onMouseOver=\"MM_swapImage('Image9','','images/btn_no_o.gif',1)\">"+
+		  "<img src='images/btn_no.gif' name='Image9' width='101' height='42' border='0'></a>"+
+		  "</p>";
+*/
+		document.getElementById('showMsg').innerHTML="<p><font color=blue><b>注意：結束作答視同繳卷</b></font></p><p><font color=blue><b>再次確認是否結束本次應考？</b></font></p>"+
+		"<p><a href='#' onClick='realEndExam();' onMouseOut='MM_swapImgRestore()' onMouseOver=\"MM_swapImage('Image8','','images/ok_btn_o.gif',1)\">"+
+		  "<img src='images/ok_btn.gif' name='Image8' width='101' height='42' border='0'></a>"+
+		  "<a href='#' onClick='CancelExamconfirm();' onMouseOut='MM_swapImgRestore()' onMouseOver=\"MM_swapImage('Image9','','images/cancel_btn_o.gif',1)\">"+
+		  "<img src='images/cancel_btn.gif' name='Image9' width='101' height='42' border='0'></a>"+
+		  "</p>";		  
+	}
+	
+	function CancelExamconfirm(){
+		window.parent.mainFrameset.rows	= "173,*,0,0,0";
+	}
+
+	function realEndExam(){
+		//tmweb.ajaxStateFlow(form1, {event: 'doExamineeEndExam'});
+		tmweb.ajaxStateFlow(form1, 'doExamineeEndExam');
+		window.parent.mainFrameset.rows	= "173,*,0,0,0";
+	}
+	
+	
+	function showMsg(msg){
+		document.getElementById('showMsg').innerHTML="<p><font color=blue><b>"+msg+"</b></font></p>";
+		setTimeout(function(){top.mainFrameset.rows="0,*,0,0,0";},5000);
+	}	
+
+</script>
+<body onLoad="MM_preloadImages('images/btn_yes_o.gif','images/btn_no_o.gif')">
+<form name='form1'>
+<table width="100%"  height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="85" bgcolor="#FFF685"><img src="images/login_head.jpg" width="1002" height="113" alt="login_head"></td>
+  </tr>
+  <tr>
+    <td valign="top" background="images/login_bg.gif"><table width="200" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="180" rowspan="2" valign="top"><img src="images/login_bg_3.gif" width="180" height="384"></td>
+        <td valign="top"><table width="666" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td colspan="3"><img src="images/login_bg_2.gif" width="666" height="20"></td>
+            </tr>
+          <tr>
+            <td colspan="3"><img src="images/login_table_1.gif" width="666" height="31" alt=""></td>
+            </tr>
+          <tr>
+            <td width="33"><img src="images/login_table_2.gif" width="33" height="205"></td>
+            <td width="603" height="205" align="center" bgcolor="#FFFFFF">
+            <div id='showMsg'></div></td>
+            <td width="30"><img src="images/login_table_3.gif" width="30" height="205"></td>
+          </tr>
+          <tr>
+            <td colspan="3"><img src="images/login_table_4.gif" width="666" height="48"></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="160" align="center" valign="bottom" class="copyright">中華民國考選部地址:台北市文山區試院路1-1號   總機:(02)22369188<br>
+          2009 Ministry of Examination R.O.C . All rights reserved.</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

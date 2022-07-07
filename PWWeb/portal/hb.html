@@ -1,0 +1,37 @@
+
+
+<script type="text/javascript" src="../scripts/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../scripts/tmweb.js"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+</head>
+
+<script>
+	var timeoutCount = 0;
+	var HBFinish='Y';
+	var nCnt =0;
+
+	run_id = setInterval(function()
+	{
+        nCnt ++;
+        //CollectGarbage();
+		if(HBFinish == 'Y' || timeoutCount > 5){
+			timeoutCount = 0;
+			HBFinish='N';
+			tmweb2.ajaxHB(null, {});
+		}else{
+			timeoutCount++;
+		}
+		
+	}, 3600000);
+
+</script>
+<body>
+<div id='HBContent'></div>
+<div id='showMsg'></div>
+</body>
+</html>

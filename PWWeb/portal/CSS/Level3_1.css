@@ -1,0 +1,216 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+td, th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	line-height: 28px;
+	color: #333333;
+}
+
+a {
+	color: #3366CC;
+	text-decoration: none;
+}
+
+form {
+	background-color: #FFFFFF;
+}
+
+.title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	line-height: 30px;
+	color: #424242;
+	font-weight: normal;
+	padding-left: 10px;
+}
+.title_2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	line-height: 30px;
+	color: #424242;
+	font-weight: bold;
+}
+.subtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: bold;
+  color: #006666;
+}
+.subtitle2 {
+	font-size: 13pt;
+	line-height: 32px;
+	color: #223a1e;
+}
+
+.hightlight {
+	font-weight: bolder;
+	color: #ed1651;
+}
+
+
+.header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	background-color: #006666;
+  color: #DCDCDC;
+}
+.formInput {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #666666;
+	border: 0px solid #E8F8F6;
+	background-image: url(../images/text_area.gif);
+	height: 43px;
+	width: 210px;
+	padding-top:12px;
+	padding-left:12px;
+}
+.copyright {
+	font-size: 12px;
+	color: #048006;
+}
+
+.nav {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+    font-weight: bold;
+	background-color: #CCCCCC;
+}
+
+.navLink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #DEDECA;
+}
+
+.sidebar {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 3px;
+	background-color: #FFFFFF;
+}
+
+.sidebarHeader {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #FFFFFF;
+	background-color: #339999;
+}
+
+.sidebarFooter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	background-color: #CCCCCC;
+}
+
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 22px;
+	color: #333333;
+	background-color: #CCCCCC;
+}
+
+.legal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #333333;
+}
+
+.box1 {
+	border-color: #CCCCCC #333333 #333333 #CCCCCC;
+	border-width: medium;
+  border-style: ridge;
+}
+
+.promo {
+	font-family: "Times New Roman", Times, serif;
+	color: #000033;
+}
+
+.titlebar {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 9px;
+	color: #FFFFFF;
+  background-color: #336699;
+}
+
+.dingbat {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #99CC99;
+  color: #006666; 
+	font-weight: bolder;
+	font-size: medium;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+.cheak_table {
+	border: 1px solid #999;
+}
+.cheak_table_head {
+	color: #333;
+	background-color: #edf0f0;
+}
+.cheak_table_highlight {
+	background-color: #fffcd6;
+	color: #333;
+}
+.cheak_table_none {
+	background-color: #ffb4b7;
+	color: #BE7474;
+}
+.highlight_green {
+	color: #360;
+}
+
+/*20101021-kira新增for login頁需求變更*/
+/*考試規則文字*/
+#testRulesWord{
+	padding-top:20px;
+	padding-left:15px;
+	padding-right:25px;
+	letter-spacing:1px;
+	font-size:13pt;
+	font-weight:bold;
+}
+#testRulesWord2{
+	padding-right:10px;
+	letter-spacing:0px;
+	color:#666;
+	font-size:12pt;
+	font-weight:bold;
+	border-bottom:#CCC dashed 1px;
+}
+#testRulesWord3{
+	padding-right:70px;
+	padding-left:50px;
+	line-height:36px;
+	letter-spacing:2px;
+	color:#666;
+	font-size:12pt;
+	font-weight:bold;
+	border-bottom:#CCC dashed 1px;
+}
+/*20101022-kira新增for紅色文字修改加入底限*/
+.textSetting01{
+	font-weight: bolder;
+	color: #ed1651;
+	text-decoration:underline;
+}
