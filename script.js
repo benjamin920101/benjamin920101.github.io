@@ -84,4 +84,5 @@ document.addEventListener('keydown', event => {
     function insertText(text) {
         const input = document.querySelector('textarea');
         input.value = text;
+		  hints.focus();
     }
