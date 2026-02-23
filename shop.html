@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⛏️ RR · 物资商店 | 3C大型稀有平价商店 🛒</title>
+    <title>🧭 指南针商店 | 专业Minecraft物资交易平台 🛒</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
         
@@ -337,7 +337,7 @@
         .modal-content {
             background: var(--bg-card);
             border-radius: 24px;
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
             padding: 40px;
             box-shadow: var(--shadow-xl);
@@ -376,9 +376,117 @@
         .modal-title {
             font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             text-align: center;
             color: var(--text-primary);
+        }
+
+        .modal-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        
+        /* Order Summary */
+        .order-summary {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .order-summary-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+
+        .order-item-name {
+            flex: 1;
+            font-weight: 500;
+        }
+
+        .order-item-quantity {
+            color: var(--text-secondary);
+            margin: 0 15px;
+        }
+
+        .order-item-price {
+            font-weight: 600;
+            color: var(--price-orange);
+        }
+
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid var(--border-color);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .order-total-price {
+            color: var(--price-orange);
+            font-size: 1.4rem;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Noto Sans SC', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-purple);
+        }
+
+        .coordinate-inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .coordinate-input {
+            text-align: center;
+        }
+
+        .coordinate-label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-secondary);
         }
         
         .delivery-option {
@@ -494,6 +602,12 @@
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
+
+        .btn-modal-primary:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+            transform: none;
+        }
         
         .btn-modal-secondary {
             background: transparent;
@@ -504,6 +618,46 @@
         .btn-modal-secondary:hover {
             border-color: var(--text-primary);
             color: var(--text-primary);
+        }
+
+        /* Screenshot Canvas */
+        #screenshotCanvas {
+            display: none;
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .success-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--success-green);
+        }
+
+        .success-text {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .screenshot-preview {
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .screenshot-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         /* Floating Cart Button */
@@ -588,7 +742,7 @@
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <h1>⛏️ RR · 物资商店</h1>
+            <h1>🧭 指南针商店</h1>
             <div class="cart-icon" onclick="openCartModal()">
                 🛒
                 <span class="cart-badge" id="cartCount">0</span>
@@ -598,12 +752,12 @@
         <!-- Hero Section -->
         <section class="hero">
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-                <span style="font-size: 2rem;">✨</span>
-                <span style="font-size: 1.3rem; font-weight: 600;">ruirui</span>
+                <span style="font-size: 2rem;">🧭</span>
+                <span style="font-size: 1.3rem; font-weight: 600;">指南针商店</span>
             </div>
             <h2>为您提供平价稀有物资</h2>
             <p class="hero-subtitle">稀有物资大本营，价格亲民童叟无欺。</p>
-            <p class="hero-qq">QQ群 1055741131</p>
+            <p class="hero-qq">QQ群 1048082640</p>
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="scrollToProducts()">开始选购</button>
                 <button class="btn btn-secondary">活动</button>
@@ -828,7 +982,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>© 2025 @ruirui • 大型稀有平价商店。</p>
+            <p>© 2025 @指南针商店 • 专业Minecraft物资交易平台。</p>
             <p style="margin-top: 10px;">我们的目标</p>
             <p>提高物资流通效率 · 保证商店长期稳定运营</p>
         </footer>
@@ -840,49 +994,124 @@
         <span class="cart-badge" id="floatingCartCount">0</span>
     </div>
 
-    <!-- Delivery Modal -->
-    <div class="modal" id="deliveryModal">
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
         <div class="modal-content">
-            <button class="modal-close" onclick="closeDeliveryModal()">✕</button>
-            <h2 class="modal-title">📦 选择配送方式</h2>
-            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 25px; font-size: 0.95rem;">
-                请选择您希望的配送方式，订单金额不足5元仅支持自提。
-            </p>
-            
-            <div class="delivery-option" id="selfPickup" onclick="selectDelivery('selfPickup')">
-                <div class="delivery-option-header">
-                    <span class="delivery-icon">🚶</span>
-                    <div class="delivery-info">
-                        <div class="delivery-name">随机坐标自提</div>
-                        <div class="delivery-price">免费</div>
+            <button class="modal-close" onclick="closeCheckoutModal()">✕</button>
+            <div id="checkoutForm">
+                <h2 class="modal-title">🛒 确认订单</h2>
+                <p class="modal-subtitle">请填写您的收货信息</p>
+                
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <div class="order-summary-title">订单详情</div>
+                    <div id="orderItems"></div>
+                    <div class="order-total">
+                        <span>总计</span>
+                        <span class="order-total-price" id="orderTotal">￥0.00</span>
                     </div>
-                    <div class="check-mark"></div>
                 </div>
-                <div class="delivery-desc">
-                    在主世界3万内随机坐标埋藏自提，免费配送
+
+                <!-- Customer Info -->
+                <div class="form-group">
+                    <label class="form-label">收货人ID *</label>
+                    <input type="text" class="form-input" id="customerID" placeholder="请输入您的游戏ID">
+                </div>
+
+                <!-- Coordinates -->
+                <div class="form-group">
+                    <label class="form-label">收货坐标 *</label>
+                    <div class="coordinate-inputs">
+                        <div class="coordinate-input">
+                            <span class="coordinate-label">X</span>
+                            <input type="number" class="form-input" id="coordX" placeholder="0">
+                        </div>
+                        <div class="coordinate-input">
+                            <span class="coordinate-label">Y</span>
+                            <input type="number" class="form-input" id="coordY" placeholder="64">
+                        </div>
+                        <div class="coordinate-input">
+                            <span class="coordinate-label">Z</span>
+                            <input type="number" class="form-input" id="coordZ" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dimension -->
+                <div class="form-group">
+                    <label class="form-label">收货维度 *</label>
+                    <select class="form-input" id="dimension">
+                        <option value="主世界">主世界 (Overworld)</option>
+                        <option value="下界">下界 (Nether)</option>
+                        <option value="末地">末地 (The End)</option>
+                    </select>
+                </div>
+
+                <!-- Delivery Method -->
+                <div class="form-group">
+                    <label class="form-label">配送方式 *</label>
+                    
+                    <div class="delivery-option" id="selfPickup" onclick="selectDelivery('selfPickup')">
+                        <div class="delivery-option-header">
+                            <span class="delivery-icon">🚶</span>
+                            <div class="delivery-info">
+                                <div class="delivery-name">随机坐标自提</div>
+                                <div class="delivery-price">免费</div>
+                            </div>
+                            <div class="check-mark"></div>
+                        </div>
+                        <div class="delivery-desc">
+                            在主世界3万内随机坐标埋藏自提，免费配送
+                        </div>
+                    </div>
+
+                    <div class="delivery-option selected" id="homeDelivery" onclick="selectDelivery('homeDelivery')">
+                        <div class="delivery-option-header">
+                            <span class="delivery-icon">🚚</span>
+                            <div class="delivery-info">
+                                <div class="delivery-name">送货上门</div>
+                                <div class="delivery-price">免费</div>
+                            </div>
+                            <div class="check-mark"></div>
+                        </div>
+                        <div class="delivery-desc">
+                            主世界8万内包邮送货上门, 超出部分运费每2w/1R
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notes -->
+                <div class="form-group">
+                    <label class="form-label">备注（选填）</label>
+                    <textarea class="form-input" id="orderNotes" rows="3" placeholder="有什么特殊要求可以在这里说明..."></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-modal btn-modal-secondary" onclick="closeCheckoutModal()">返回购物</button>
+                    <button class="btn-modal btn-modal-primary" onclick="generateOrderImage()" id="submitBtn">生成订单图片</button>
                 </div>
             </div>
 
-            <div class="delivery-option" id="homeDelivery" onclick="selectDelivery('homeDelivery')">
-                <div class="delivery-option-header">
-                    <span class="delivery-icon">🚚</span>
-                    <div class="delivery-info">
-                        <div class="delivery-name">送货上门</div>
-                        <div class="delivery-price">免费</div>
-                    </div>
-                    <div class="check-mark"></div>
+            <!-- Success View -->
+            <div id="successView" style="display: none;">
+                <div class="success-message">
+                    <div class="success-icon">✅</div>
+                    <div class="success-title">订单图片已生成</div>
+                    <div class="success-text">请长按保存图片，然后发送到QQ群完成下单</div>
                 </div>
-                <div class="delivery-desc">
-                    主世界8万内包邮送货上门, 超出部分运费每2w/1R
-                </div>
-            </div>
+                
+                <div class="screenshot-preview" id="screenshotPreview"></div>
 
-            <div class="modal-actions">
-                <button class="btn-modal btn-modal-secondary" onclick="closeDeliveryModal()">取消</button>
-                <button class="btn-modal btn-modal-primary" onclick="confirmDelivery()">下一步：确认订单</button>
+                <div class="modal-actions">
+                    <button class="btn-modal btn-modal-secondary" onclick="downloadOrderImage()">📥 下载图片</button>
+                    <button class="btn-modal btn-modal-primary" onclick="resetCheckout()">完成</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Hidden canvas for screenshot -->
+    <canvas id="screenshotCanvas"></canvas>
 
     <script>
         // Cart state
