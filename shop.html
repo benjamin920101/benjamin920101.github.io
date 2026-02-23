@@ -882,184 +882,619 @@
             <input type="text" class="search-bar" placeholder="搜索商品名称或描述..." id="searchInput" oninput="filterProducts()">
             
             <div class="products-grid" id="productsGrid">
-                <!-- Featured Products -->
-                <div class="product-card" data-name="附魔金苹果" data-desc="限时现货 稀有珍品">
-                    <span class="product-icon">🍎</span>
-                    <div class="product-name">附魔金苹果</div>
-                    <div class="product-desc">限时现货</div>
-                    <div class="product-price">￥12.9 / 组</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('附魔金苹果', 12.9)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="金苹果" data-desc="现货">
-                    <span class="product-icon">🍎</span>
-                    <div class="product-name">金苹果</div>
-                    <div class="product-desc">现货</div>
-                    <div class="product-price">￥4.5 / 盒</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('金苹果', 4.5)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="白板重锤" data-desc="买10个发一盒">
-                    <span class="product-icon">🔨</span>
-                    <div class="product-name">白板重锤</div>
-                    <div class="product-desc">买10个发一盒</div>
-                    <div class="product-price">￥2.8 / 个</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('白板重锤', 2.8)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="破甲重锤" data-desc="破甲 满附魔">
-                    <span class="product-icon">🔨</span>
-                    <div class="product-name">破甲重锤</div>
-                    <div class="product-desc">破甲 · 满附魔</div>
-                    <div class="product-price">￥4.5 / 个</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('破甲重锤', 4.5)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="风爆3重锤" data-desc="风爆3破甲 满附魔">
-                    <span class="product-icon">🔨</span>
-                    <div class="product-name">风爆3重锤</div>
-                    <div class="product-desc">风爆3破甲 · 满附魔</div>
-                    <div class="product-price">￥9.9 / 个</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('风爆3重锤', 9.9)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="沉重核心" data-desc="地板价 1组起购">
-                    <span class="product-icon">🧊</span>
-                    <div class="product-name">沉重核心</div>
-                    <div class="product-desc">地板价|1组起购</div>
-                    <div class="product-price">￥64 / 组</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('沉重核心', 64)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="神龟药水" data-desc="打架必备">
-                    <span class="product-icon">🐢</span>
-                    <div class="product-name">神龟药水</div>
-                    <div class="product-desc">打架必备</div>
-                    <div class="product-price">￥1.9 / 盒</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('神龟药水', 1.9)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="力量药水II" data-desc="打架必备">
-                    <span class="product-icon">🧪</span>
-                    <div class="product-name">力量药水Ⅱ</div>
-                    <div class="product-desc">打架必备</div>
-                    <div class="product-price">￥0.9 / 盒</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('力量药水Ⅱ', 0.9)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="白板鞘翅" data-desc="Elytra 无附魔">
-                    <span class="product-icon">🪂</span>
-                    <div class="product-name">白板鞘翅</div>
-                    <div class="product-desc">Elytra · 无附魔</div>
-                    <div class="product-price">￥1.7 / 个</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('白板鞘翅', 1.7)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="满附魔鞘翅" data-desc="耐久3+经修 满附魔">
-                    <span class="product-icon">🪂</span>
-                    <div class="product-name">满附魔鞘翅</div>
-                    <div class="product-desc">耐久3+经修 · 满附魔</div>
-                    <div class="product-price">￥1.9 / 个</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('满附魔鞘翅', 1.9)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="钻石kit" data-desc="附魔鞘翅+钻石全身+钻石剑镐">
-                    <span class="product-icon">💎</span>
-                    <div class="product-name">钻石kit</div>
-                    <div class="product-desc">附魔鞘翅+钻石全身+钻石剑镐</div>
-                    <div class="product-price">￥4.9 / 套</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('钻石kit', 4.9)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="下界合金kit" data-desc="全新打造">
-                    <span class="product-icon">⚔️</span>
-                    <div class="product-name">下界合金kit</div>
-                    <div class="product-desc">全新打造</div>
-                    <div class="product-price">￥6.8 / 套</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('下界合金kit', 6.8)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="经验瓶" data-desc="xp 居家旅行必备">
-                    <span class="product-icon">🧪</span>
-                    <div class="product-name">经验瓶</div>
-                    <div class="product-desc">xp 居家旅行必备</div>
-                    <div class="product-price">￥2.9 / 盒</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('经验瓶', 2.9)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="不死图腾" data-desc="保命神器">
-                    <span class="product-icon">🗿</span>
-                    <div class="product-name">不死图腾</div>
-                    <div class="product-desc">保命神器</div>
-                    <div class="product-price">￥0.3 / 盒</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('不死图腾', 0.3)">加入购物车</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-name="潜影壳" data-desc="居家旅行必备">
-                    <span class="product-icon">📦</span>
-                    <div class="product-name">潜影壳</div>
-                    <div class="product-desc">居家旅行必备</div>
-                    <div class="product-price">￥4.9 / 盒</div>
-                    <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('潜影壳', 4.9)">加入购物车</button>
-                    </div>
-                </div>
-
+                <!-- 末地水晶 -->
                 <div class="product-card" data-name="末地水晶" data-desc="End Crystal">
                     <span class="product-icon">💎</span>
                     <div class="product-name">末地水晶</div>
-                    <div class="product-desc">End Crystal</div>
-                    <div class="product-price">￥9.9 / 盒</div>
+                    <div class="product-desc">End Crystal · 1盒</div>
+                    <div class="product-price">￥5 / 盒</div>
                     <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('末地水晶', 9.9)">加入购物车</button>
+                        <button class="btn-add-cart" onclick="addToCart('末地水晶', 5)">加入购物车</button>
                     </div>
                 </div>
 
-                <div class="product-card" data-name="信标" data-desc="Beacon 特殊功能方块">
+                <!-- 重生锚 -->
+                <div class="product-card" data-name="重生锚" data-desc="Respawn Anchor">
+                    <span class="product-icon">🪨</span>
+                    <div class="product-name">重生锚</div>
+                    <div class="product-desc">Respawn Anchor · 1盒</div>
+                    <div class="product-price">￥6 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('重生锚', 6)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 附魔之瓶 -->
+                <div class="product-card" data-name="附魔之瓶" data-desc="经验瓶 xp">
+                    <span class="product-icon">🧪</span>
+                    <div class="product-name">附魔之瓶</div>
+                    <div class="product-desc">经验瓶 xp · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('附魔之瓶', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 鞘翅 -->
+                <div class="product-card" data-name="鞘翅" data-desc="Elytra">
+                    <span class="product-icon">🪂</span>
+                    <div class="product-name">鞘翅</div>
+                    <div class="product-desc">Elytra · 1个</div>
+                    <div class="product-price">￥1 / 个</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('鞘翅', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 金苹果 -->
+                <div class="product-card" data-name="金苹果" data-desc="Golden Apple">
+                    <span class="product-icon">🍎</span>
+                    <div class="product-name">金苹果</div>
+                    <div class="product-desc">Golden Apple · 1盒</div>
+                    <div class="product-price">￥3 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('金苹果', 3)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 金胡萝卜 -->
+                <div class="product-card" data-name="金胡萝卜" data-desc="Golden Carrot">
+                    <span class="product-icon">🥕</span>
+                    <div class="product-name">金胡萝卜</div>
+                    <div class="product-desc">Golden Carrot · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('金胡萝卜', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 不死图腾 -->
+                <div class="product-card" data-name="不死图腾" data-desc="保命神器">
+                    <span class="product-icon">🗿</span>
+                    <div class="product-name">不死图腾</div>
+                    <div class="product-desc">保命神器 · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('不死图腾', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 神龟药水 -->
+                <div class="product-card" data-name="神龟药水" data-desc="打架必备">
+                    <span class="product-icon">🐢</span>
+                    <div class="product-name">神龟药水</div>
+                    <div class="product-desc">打架必备 · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('神龟药水', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 力量药水 -->
+                <div class="product-card" data-name="力量药水" data-desc="力量增强">
+                    <span class="product-icon">🧪</span>
+                    <div class="product-name">力量药水</div>
+                    <div class="product-desc">力量增强 · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('力量药水', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 萤石 -->
+                <div class="product-card" data-name="萤石" data-desc="Glowstone">
+                    <span class="product-icon">💡</span>
+                    <div class="product-name">萤石</div>
+                    <div class="product-desc">Glowstone · 1盒</div>
+                    <div class="product-price">￥1.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('萤石', 1.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 潜影壳 -->
+                <div class="product-card" data-name="潜影壳" data-desc="居家旅行必备">
+                    <span class="product-icon">📦</span>
+                    <div class="product-name">潜影壳</div>
+                    <div class="product-desc">居家旅行必备 · 1盒</div>
+                    <div class="product-price">￥2 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('潜影壳', 2)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 下界合金 -->
+                <div class="product-card" data-name="下界合金" data-desc="Netherite">
+                    <span class="product-icon">⚔️</span>
+                    <div class="product-name">下界合金</div>
+                    <div class="product-desc">Netherite · 1组</div>
+                    <div class="product-price">￥8 / 组</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('下界合金', 8)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 三速烟花 -->
+                <div class="product-card" data-name="三速烟花" data-desc="快速飞行">
+                    <span class="product-icon">🎆</span>
+                    <div class="product-name">三速烟花</div>
+                    <div class="product-desc">快速飞行 · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('三速烟花', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 黑曜石 -->
+                <div class="product-card" data-name="黑曜石" data-desc="Obsidian">
+                    <span class="product-icon">🖤</span>
+                    <div class="product-name">黑曜石</div>
+                    <div class="product-desc">Obsidian · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('黑曜石', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 活塞 -->
+                <div class="product-card" data-name="活塞" data-desc="Piston">
+                    <span class="product-icon">🔧</span>
+                    <div class="product-name">活塞</div>
+                    <div class="product-desc">Piston · 1盒</div>
+                    <div class="product-price">￥2 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('活塞', 2)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- TNT -->
+                <div class="product-card" data-name="TNT" data-desc="爆炸物">
+                    <span class="product-icon">🧨</span>
+                    <div class="product-name">TNT</div>
+                    <div class="product-desc">爆炸物 · 1盒</div>
+                    <div class="product-price">￥3 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('TNT', 3)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 沙子 -->
+                <div class="product-card" data-name="沙子" data-desc="Sand">
+                    <span class="product-icon">🏖️</span>
+                    <div class="product-name">沙子</div>
+                    <div class="product-desc">Sand · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('沙子', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 玻璃 -->
+                <div class="product-card" data-name="玻璃" data-desc="Glass">
+                    <span class="product-icon">🪟</span>
+                    <div class="product-name">玻璃</div>
+                    <div class="product-desc">Glass · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('玻璃', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 木头 -->
+                <div class="product-card" data-name="木头" data-desc="Wood">
+                    <span class="product-icon">🪵</span>
+                    <div class="product-name">木头</div>
+                    <div class="product-desc">Wood · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('木头', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 骨块 -->
+                <div class="product-card" data-name="骨块" data-desc="Bone Block">
+                    <span class="product-icon">🦴</span>
+                    <div class="product-name">骨块</div>
+                    <div class="product-desc">Bone Block · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('骨块', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 粘液块 -->
+                <div class="product-card" data-name="粘液块" data-desc="Slime Block">
+                    <span class="product-icon">🟢</span>
+                    <div class="product-name">粘液块</div>
+                    <div class="product-desc">Slime Block · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('粘液块', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 煤炭块 -->
+                <div class="product-card" data-name="煤炭块" data-desc="Coal Block">
+                    <span class="product-icon">⬛</span>
+                    <div class="product-name">煤炭块</div>
+                    <div class="product-desc">Coal Block · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('煤炭块', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 铁块 -->
+                <div class="product-card" data-name="铁块" data-desc="Iron Block">
+                    <span class="product-icon">⬜</span>
+                    <div class="product-name">铁块</div>
+                    <div class="product-desc">Iron Block · 1盒</div>
+                    <div class="product-price">￥2 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('铁块', 2)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 红石 -->
+                <div class="product-card" data-name="红石" data-desc="Redstone">
+                    <span class="product-icon">🔴</span>
+                    <div class="product-name">红石</div>
+                    <div class="product-desc">Redstone · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('红石', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 金块 -->
+                <div class="product-card" data-name="金块" data-desc="Gold Block">
+                    <span class="product-icon">🟡</span>
+                    <div class="product-name">金块</div>
+                    <div class="product-desc">Gold Block · 1盒</div>
+                    <div class="product-price">￥2 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('金块', 2)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 绿宝石块 -->
+                <div class="product-card" data-name="绿宝石块" data-desc="Emerald Block">
+                    <span class="product-icon">💚</span>
+                    <div class="product-name">绿宝石块</div>
+                    <div class="product-desc">Emerald Block · 1盒</div>
+                    <div class="product-price">￥4 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('绿宝石块', 4)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 钻石块 -->
+                <div class="product-card" data-name="钻石块" data-desc="Diamond Block">
+                    <span class="product-icon">💎</span>
+                    <div class="product-name">钻石块</div>
+                    <div class="product-desc">Diamond Block · 1组</div>
+                    <div class="product-price">￥1 / 组</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('钻石块', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 哭泣的黑曜石 -->
+                <div class="product-card" data-name="哭泣的黑曜石" data-desc="Crying Obsidian">
+                    <span class="product-icon">😢</span>
+                    <div class="product-name">哭泣的黑曜石</div>
+                    <div class="product-desc">Crying Obsidian · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('哭泣的黑曜石', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 灵魂沙 -->
+                <div class="product-card" data-name="灵魂沙" data-desc="Soul Sand">
+                    <span class="product-icon">🕳️</span>
+                    <div class="product-name">灵魂沙</div>
+                    <div class="product-desc">Soul Sand · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('灵魂沙', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 蜂蜜块 -->
+                <div class="product-card" data-name="蜂蜜块" data-desc="Honey Block">
+                    <span class="product-icon">🍯</span>
+                    <div class="product-name">蜂蜜块</div>
+                    <div class="product-desc">Honey Block · 1盒</div>
+                    <div class="product-price">￥2 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('蜂蜜块', 2)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 海晶灯 -->
+                <div class="product-card" data-name="海晶灯" data-desc="Sea Lantern">
                     <span class="product-icon">🔦</span>
-                    <div class="product-name">信标</div>
-                    <div class="product-desc">Beacon · 特殊功能方块</div>
-                    <div class="product-price">￥60 / 盒</div>
+                    <div class="product-name">海晶灯</div>
+                    <div class="product-desc">Sea Lantern · 1盒</div>
+                    <div class="product-price">￥2 / 盒</div>
                     <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('信标', 60)">加入购物车</button>
+                        <button class="btn-add-cart" onclick="addToCart('海晶灯', 2)">加入购物车</button>
                     </div>
                 </div>
 
-                <div class="product-card" data-name="凋灵骷髅头颅" data-desc="凋零!">
-                    <span class="product-icon">💀</span>
-                    <div class="product-name">凋灵骷髅头颅</div>
-                    <div class="product-desc">凋零!</div>
-                    <div class="product-price">￥14.9 / 盒</div>
+                <!-- 海晶砖 -->
+                <div class="product-card" data-name="海晶砖" data-desc="Prismarine Bricks">
+                    <span class="product-icon">🧱</span>
+                    <div class="product-name">海晶砖</div>
+                    <div class="product-desc">Prismarine Bricks · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
                     <div class="product-buttons">
-                        <button class="btn-add-cart" onclick="addToCart('凋灵骷髅头颅', 14.9)">加入购物车</button>
+                        <button class="btn-add-cart" onclick="addToCart('海晶砖', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 蛙鸣灯 -->
+                <div class="product-card" data-name="蛙鸣灯" data-desc="Frog Light">
+                    <span class="product-icon">🐸</span>
+                    <div class="product-name">蛙鸣灯</div>
+                    <div class="product-desc">Frog Light · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('蛙鸣灯', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 砂砾 -->
+                <div class="product-card" data-name="砂砾" data-desc="Gravel">
+                    <span class="product-icon">🪨</span>
+                    <div class="product-name">砂砾</div>
+                    <div class="product-desc">Gravel · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('砂砾', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 甘蔗 -->
+                <div class="product-card" data-name="甘蔗" data-desc="Sugar Cane">
+                    <span class="product-icon">🎋</span>
+                    <div class="product-name">甘蔗</div>
+                    <div class="product-desc">Sugar Cane · 1盒</div>
+                    <div class="product-price">￥0.2 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('甘蔗', 0.2)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 火药 -->
+                <div class="product-card" data-name="火药" data-desc="Gunpowder">
+                    <span class="product-icon">🧨</span>
+                    <div class="product-name">火药</div>
+                    <div class="product-desc">Gunpowder · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('火药', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 烈焰棒 -->
+                <div class="product-card" data-name="烈焰棒" data-desc="Blaze Rod">
+                    <span class="product-icon">🔥</span>
+                    <div class="product-name">烈焰棒</div>
+                    <div class="product-desc">Blaze Rod · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('烈焰棒', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 末影珍珠 -->
+                <div class="product-card" data-name="末影珍珠" data-desc="Ender Pearl">
+                    <span class="product-icon">🔮</span>
+                    <div class="product-name">末影珍珠</div>
+                    <div class="product-desc">Ender Pearl · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('末影珍珠', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 岩浆膏 -->
+                <div class="product-card" data-name="岩浆膏" data-desc="Magma Cream">
+                    <span class="product-icon">🌋</span>
+                    <div class="product-name">岩浆膏</div>
+                    <div class="product-desc">Magma Cream · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('岩浆膏', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 地狱疣 -->
+                <div class="product-card" data-name="地狱疣" data-desc="Nether Wart">
+                    <span class="product-icon">🍄</span>
+                    <div class="product-name">地狱疣</div>
+                    <div class="product-desc">Nether Wart · 1盒</div>
+                    <div class="product-price">￥2 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('地狱疣', 2)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 凋零头 -->
+                <div class="product-card" data-name="凋零头" data-desc="Wither Skull">
+                    <span class="product-icon">💀</span>
+                    <div class="product-name">凋零头</div>
+                    <div class="product-desc">Wither Skull · 1盒</div>
+                    <div class="product-price">￥3 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('凋零头', 3)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 不祥之瓶 -->
+                <div class="product-card" data-name="不祥之瓶" data-desc="Ominous Bottle">
+                    <span class="product-icon">🍾</span>
+                    <div class="product-name">不祥之瓶</div>
+                    <div class="product-desc">Ominous Bottle · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('不祥之瓶', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 玻璃瓶 -->
+                <div class="product-card" data-name="玻璃瓶" data-desc="Glass Bottle">
+                    <span class="product-icon">🍶</span>
+                    <div class="product-name">玻璃瓶</div>
+                    <div class="product-desc">Glass Bottle · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('玻璃瓶', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 失水恶魂 -->
+                <div class="product-card" data-name="失水恶魂" data-desc="Dropped Ghast Tear">
+                    <span class="product-icon">👻</span>
+                    <div class="product-name">失水恶魂</div>
+                    <div class="product-desc">Dropped Ghast Tear · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('失水恶魂', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 恶魂之泪 -->
+                <div class="product-card" data-name="恶魂之泪" data-desc="Ghast Tear">
+                    <span class="product-icon">💧</span>
+                    <div class="product-name">恶魂之泪</div>
+                    <div class="product-desc">Ghast Tear · 1盒</div>
+                    <div class="product-price">￥0.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('恶魂之泪', 0.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 石英 -->
+                <div class="product-card" data-name="石英" data-desc="Nether Quartz">
+                    <span class="product-icon">💎</span>
+                    <div class="product-name">石英</div>
+                    <div class="product-desc">Nether Quartz · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('石英', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 凋零玫瑰 -->
+                <div class="product-card" data-name="凋零玫瑰" data-desc="Wither Rose">
+                    <span class="product-icon">🥀</span>
+                    <div class="product-name">凋零玫瑰</div>
+                    <div class="product-desc">Wither Rose · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('凋零玫瑰', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 皮革 -->
+                <div class="product-card" data-name="皮革" data-desc="Leather">
+                    <span class="product-icon">🟤</span>
+                    <div class="product-name">皮革</div>
+                    <div class="product-desc">Leather · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('皮革', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 线 -->
+                <div class="product-card" data-name="线" data-desc="String">
+                    <span class="product-icon">🧵</span>
+                    <div class="product-name">线</div>
+                    <div class="product-desc">String · 1盒</div>
+                    <div class="product-price">￥0.1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('线', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 命名牌 -->
+                <div class="product-card" data-name="命名牌" data-desc="Name Tag">
+                    <span class="product-icon">🏷️</span>
+                    <div class="product-name">命名牌</div>
+                    <div class="product-desc">Name Tag · 1盒</div>
+                    <div class="product-price">￥4 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('命名牌', 4)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 冰块 -->
+                <div class="product-card" data-name="冰块" data-desc="Ice">
+                    <span class="product-icon">🧊</span>
+                    <div class="product-name">冰块</div>
+                    <div class="product-desc">Ice · 1盒</div>
+                    <div class="product-price">￥1 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('冰块', 1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 龙息 -->
+                <div class="product-card" data-name="龙息" data-desc="Dragon's Breath">
+                    <span class="product-icon">🐉</span>
+                    <div class="product-name">龙息</div>
+                    <div class="product-desc">Dragon's Breath · 1组</div>
+                    <div class="product-price">￥0.1 / 组</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('龙息', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 混合补给 -->
+                <div class="product-card" data-name="混合补给" data-desc="随机丰富物资">
+                    <span class="product-icon">📦</span>
+                    <div class="product-name">混合补给</div>
+                    <div class="product-desc">随机丰富物资 · 1盒</div>
+                    <div class="product-price">￥2 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('混合补给', 2)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- KIT -->
+                <div class="product-card" data-name="KIT" data-desc="豪华装备礼包">
+                    <span class="product-icon">🎁</span>
+                    <div class="product-name">KIT</div>
+                    <div class="product-desc">豪华装备礼包 · 1盒</div>
+                    <div class="product-price">￥5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('KIT', 5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 地图画 -->
+                <div class="product-card" data-name="地图画" data-desc="自定义图案">
+                    <span class="product-icon">🖼️</span>
+                    <div class="product-name">地图画</div>
+                    <div class="product-desc">自定义图案 · 1格</div>
+                    <div class="product-price">￥0.1 / 格</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('地图画', 0.1)">加入购物车</button>
+                    </div>
+                </div>
+
+                <!-- 附魔金苹果 -->
+                <div class="product-card" data-name="附魔金苹果" data-desc="限时现货 稀有珍品">
+                    <span class="product-icon">🍎</span>
+                    <div class="product-name">附魔金苹果</div>
+                    <div class="product-desc">限时现货 · 稀有珍品</div>
+                    <div class="product-price">￥12.9 / 组</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('附魔金苹果', 12.9)">加入购物车</button>
                     </div>
                 </div>
             </div>
