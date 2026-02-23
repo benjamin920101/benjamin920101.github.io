@@ -316,13 +316,16 @@
             z-index: 1000;
             padding: 20px;
             overflow-y: auto;
+            align-items: flex-start;
         }
         
         .modal.active {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             animation: fadeIn 0.3s ease-out;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
         
         @keyframes fadeIn {
@@ -343,6 +346,9 @@
             box-shadow: var(--shadow-xl);
             position: relative;
             animation: slideUp 0.3s ease-out;
+            margin: auto;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
         }
         
         @keyframes slideUp {
@@ -367,6 +373,7 @@
             background: none;
             border: none;
             padding: 5px;
+            z-index: 10;
         }
         
         .modal-close:hover {
@@ -408,6 +415,7 @@
             justify-content: space-between;
             padding: 10px 0;
             border-bottom: 1px solid var(--border-color);
+            gap: 10px;
         }
 
         .order-item:last-child {
@@ -417,16 +425,18 @@
         .order-item-name {
             flex: 1;
             font-weight: 500;
+            word-break: break-word;
         }
 
         .order-item-quantity {
             color: var(--text-secondary);
-            margin: 0 15px;
+            white-space: nowrap;
         }
 
         .order-item-price {
             font-weight: 600;
             color: var(--price-orange);
+            white-space: nowrap;
         }
 
         .order-total {
@@ -518,10 +528,12 @@
         
         .delivery-icon {
             font-size: 2rem;
+            flex-shrink: 0;
         }
         
         .delivery-info {
             flex: 1;
+            min-width: 0;
         }
         
         .delivery-name {
@@ -554,6 +566,7 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s;
+            flex-shrink: 0;
         }
         
         .delivery-option.selected .check-mark {
@@ -659,6 +672,11 @@
             height: auto;
             display: block;
         }
+
+        /* Hidden class */
+        .hidden {
+            display: none !important;
+        }
         
         /* Floating Cart Button */
         .floating-cart {
@@ -726,6 +744,67 @@
             
             .modal-content {
                 padding: 30px 20px;
+                margin: 10px;
+                max-height: calc(100vh - 20px);
+            }
+
+            .modal-title {
+                font-size: 1.5rem;
+            }
+
+            .order-item {
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .order-item-name {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .coordinate-inputs {
+                gap: 8px;
+            }
+
+            .delivery-option {
+                padding: 15px;
+            }
+
+            .delivery-option-header {
+                gap: 10px;
+            }
+
+            .delivery-icon {
+                font-size: 1.5rem;
+            }
+
+            .delivery-name {
+                font-size: 1rem;
+            }
+
+            .delivery-price {
+                font-size: 1rem;
+            }
+
+            .delivery-desc {
+                padding-left: 40px;
+                font-size: 0.85rem;
+            }
+
+            .check-mark {
+                width: 20px;
+                height: 20px;
+                top: 15px;
+                right: 15px;
+            }
+
+            .btn-modal {
+                padding: 12px;
+                font-size: 1rem;
+            }
+
+            .modal-actions {
+                gap: 10px;
             }
             
             .floating-cart {
@@ -734,6 +813,24 @@
                 width: 50px;
                 height: 50px;
                 font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal {
+                padding: 10px;
+            }
+
+            .modal-content {
+                padding: 25px 15px;
+            }
+
+            .modal-actions {
+                flex-direction: column;
+            }
+
+            .btn-modal {
+                width: 100%;
             }
         }
     </style>
@@ -1018,35 +1115,6 @@
                     <input type="text" class="form-input" id="customerID" placeholder="请输入您的游戏ID">
                 </div>
 
-                <!-- Coordinates -->
-                <div class="form-group">
-                    <label class="form-label">收货坐标 *</label>
-                    <div class="coordinate-inputs">
-                        <div class="coordinate-input">
-                            <span class="coordinate-label">X</span>
-                            <input type="number" class="form-input" id="coordX" placeholder="0">
-                        </div>
-                        <div class="coordinate-input">
-                            <span class="coordinate-label">Y</span>
-                            <input type="number" class="form-input" id="coordY" placeholder="64">
-                        </div>
-                        <div class="coordinate-input">
-                            <span class="coordinate-label">Z</span>
-                            <input type="number" class="form-input" id="coordZ" placeholder="0">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dimension -->
-                <div class="form-group">
-                    <label class="form-label">收货维度 *</label>
-                    <select class="form-input" id="dimension">
-                        <option value="主世界">主世界 (Overworld)</option>
-                        <option value="下界">下界 (Nether)</option>
-                        <option value="末地">末地 (The End)</option>
-                    </select>
-                </div>
-
                 <!-- Delivery Method -->
                 <div class="form-group">
                     <label class="form-label">配送方式 *</label>
@@ -1077,6 +1145,37 @@
                         <div class="delivery-desc">
                             主世界8万内包邮送货上门, 超出部分运费每2w/1R
                         </div>
+                    </div>
+                </div>
+
+                <!-- Coordinates (only for home delivery) -->
+                <div id="coordinateSection">
+                    <div class="form-group">
+                        <label class="form-label">收货坐标 *</label>
+                        <div class="coordinate-inputs">
+                            <div class="coordinate-input">
+                                <span class="coordinate-label">X</span>
+                                <input type="number" class="form-input" id="coordX" placeholder="0">
+                            </div>
+                            <div class="coordinate-input">
+                                <span class="coordinate-label">Y</span>
+                                <input type="number" class="form-input" id="coordY" placeholder="64">
+                            </div>
+                            <div class="coordinate-input">
+                                <span class="coordinate-label">Z</span>
+                                <input type="number" class="form-input" id="coordZ" placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dimension -->
+                    <div class="form-group">
+                        <label class="form-label">收货维度 *</label>
+                        <select class="form-input" id="dimension">
+                            <option value="主世界">主世界 (Overworld)</option>
+                            <option value="下界">下界 (Nether)</option>
+                            <option value="末地">末地 (The End)</option>
+                        </select>
                     </div>
                 </div>
 
@@ -1116,7 +1215,8 @@
     <script>
         // Cart state
         let cartItems = [];
-        let selectedDelivery = null;
+        let selectedDelivery = 'homeDelivery';
+        let generatedImageDataUrl = null;
 
         // Add to cart function
         function addToCart(name, price) {
@@ -1143,23 +1243,43 @@
                 showNotification('购物车为空');
                 return;
             }
-            openDeliveryModal();
+            openCheckoutModal();
         }
 
-        // Open delivery modal
-        function openDeliveryModal() {
-            document.getElementById('deliveryModal').classList.add('active');
+        // Open checkout modal
+        function openCheckoutModal() {
+            // Populate order summary
+            const orderItemsDiv = document.getElementById('orderItems');
+            orderItemsDiv.innerHTML = '';
+            
+            let totalPrice = 0;
+            cartItems.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                totalPrice += itemTotal;
+                
+                const orderItemDiv = document.createElement('div');
+                orderItemDiv.className = 'order-item';
+                orderItemDiv.innerHTML = `
+                    <span class="order-item-name">${item.name}</span>
+                    <span class="order-item-quantity">x${item.quantity}</span>
+                    <span class="order-item-price">￥${itemTotal.toFixed(2)}</span>
+                `;
+                orderItemsDiv.appendChild(orderItemDiv);
+            });
+            
+            document.getElementById('orderTotal').textContent = `￥${totalPrice.toFixed(2)}`;
+            
+            // Show/hide coordinate section based on delivery method
+            updateCoordinateSection();
+            
+            document.getElementById('checkoutModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
-        // Close delivery modal
-        function closeDeliveryModal() {
-            document.getElementById('deliveryModal').classList.remove('active');
+        // Close checkout modal
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.remove('active');
             document.body.style.overflow = 'auto';
-            selectedDelivery = null;
-            document.querySelectorAll('.delivery-option').forEach(option => {
-                option.classList.remove('selected');
-            });
         }
 
         // Select delivery option
@@ -1169,25 +1289,261 @@
                 option.classList.remove('selected');
             });
             document.getElementById(optionId).classList.add('selected');
+            
+            // Update coordinate section visibility
+            updateCoordinateSection();
         }
 
-        // Confirm delivery
-        function confirmDelivery() {
-            if (!selectedDelivery) {
-                showNotification('请选择配送方式');
-                return;
+        // Update coordinate section visibility
+        function updateCoordinateSection() {
+            const coordinateSection = document.getElementById('coordinateSection');
+            if (selectedDelivery === 'selfPickup') {
+                coordinateSection.classList.add('hidden');
+            } else {
+                coordinateSection.classList.remove('hidden');
+            }
+        }
+
+        // Validate form
+        function validateForm() {
+            const customerID = document.getElementById('customerID').value.trim();
+            
+            if (!customerID) {
+                showNotification('❌ 请输入收货人ID');
+                return false;
             }
             
-            const deliveryName = selectedDelivery === 'selfPickup' ? '随机坐标自提' : '送货上门';
-            const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
+            // Only validate coordinates for home delivery
+            if (selectedDelivery === 'homeDelivery') {
+                const coordX = document.getElementById('coordX').value;
+                const coordY = document.getElementById('coordY').value;
+                const coordZ = document.getElementById('coordZ').value;
+                
+                if (!coordX || !coordY || !coordZ) {
+                    showNotification('❌ 请填写完整的坐标信息');
+                    return false;
+                }
+            }
             
-            showNotification(`已选择${deliveryName}，订单总额：￥${totalPrice}，即将跳转支付...`);
+            return true;
+        }
+
+        // Generate order image
+        async function generateOrderImage() {
+            if (!validateForm()) return;
             
-            setTimeout(() => {
-                closeDeliveryModal();
-                cartItems = [];
-                updateCartCount();
-            }, 2000);
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '生成中...';
+            
+            try {
+                const canvas = document.getElementById('screenshotCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Set canvas size
+                canvas.width = 800;
+                const baseHeight = 900;
+                canvas.height = baseHeight + (cartItems.length * 40);
+                
+                // Background gradient
+                const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+                gradient.addColorStop(0, '#8b5cf6');
+                gradient.addColorStop(1, '#7c3aed');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Header
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 48px "Noto Sans SC", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('🧭 指南针商店', canvas.width / 2, 80);
+                
+                ctx.font = '24px "Noto Sans SC", sans-serif';
+                ctx.fillText('订单确认单', canvas.width / 2, 130);
+                
+                // White content area
+                ctx.fillStyle = 'white';
+                ctx.roundRect(40, 170, canvas.width - 80, canvas.height - 230, 20);
+                ctx.fill();
+                
+                // Order details
+                ctx.fillStyle = '#1f2937';
+                ctx.textAlign = 'left';
+                ctx.font = 'bold 28px "Noto Sans SC", sans-serif';
+                ctx.fillText('订单详情', 70, 220);
+                
+                let yPos = 270;
+                ctx.font = '20px "Noto Sans SC", sans-serif';
+                
+                cartItems.forEach(item => {
+                    const itemTotal = (item.price * item.quantity).toFixed(2);
+                    ctx.fillStyle = '#374151';
+                    ctx.fillText(`${item.name}`, 70, yPos);
+                    ctx.fillText(`x${item.quantity}`, 500, yPos);
+                    ctx.fillStyle = '#f97316';
+                    ctx.font = 'bold 20px "Noto Sans SC", sans-serif';
+                    ctx.fillText(`￥${itemTotal}`, 600, yPos);
+                    ctx.font = '20px "Noto Sans SC", sans-serif';
+                    yPos += 40;
+                });
+                
+                // Total
+                yPos += 20;
+                ctx.strokeStyle = '#e5e7eb';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(70, yPos);
+                ctx.lineTo(canvas.width - 70, yPos);
+                ctx.stroke();
+                
+                yPos += 40;
+                ctx.fillStyle = '#1f2937';
+                ctx.font = 'bold 24px "Noto Sans SC", sans-serif';
+                ctx.fillText('总计', 70, yPos);
+                ctx.fillStyle = '#f97316';
+                ctx.font = 'bold 32px "Noto Sans SC", sans-serif';
+                const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
+                ctx.fillText(`￥${totalPrice}`, 600, yPos);
+                
+                // Customer info
+                yPos += 60;
+                ctx.fillStyle = '#1f2937';
+                ctx.font = 'bold 28px "Noto Sans SC", sans-serif';
+                ctx.fillText('收货信息', 70, yPos);
+                
+                yPos += 50;
+                ctx.font = '20px "Noto Sans SC", sans-serif';
+                ctx.fillStyle = '#6b7280';
+                
+                const customerID = document.getElementById('customerID').value;
+                const deliveryName = selectedDelivery === 'selfPickup' ? '随机坐标自提' : '送货上门';
+                const notes = document.getElementById('orderNotes').value;
+                
+                ctx.fillText(`收货人ID: ${customerID}`, 70, yPos);
+                yPos += 35;
+                
+                // Only show coordinates for home delivery
+                if (selectedDelivery === 'homeDelivery') {
+                    const coordX = document.getElementById('coordX').value;
+                    const coordY = document.getElementById('coordY').value;
+                    const coordZ = document.getElementById('coordZ').value;
+                    const dimension = document.getElementById('dimension').value;
+                    
+                    ctx.fillText(`坐标: X:${coordX} Y:${coordY} Z:${coordZ}`, 70, yPos);
+                    yPos += 35;
+                    ctx.fillText(`维度: ${dimension}`, 70, yPos);
+                    yPos += 35;
+                }
+                
+                ctx.fillText(`配送方式: ${deliveryName}`, 70, yPos);
+                
+                if (notes) {
+                    yPos += 35;
+                    // Wrap long notes text
+                    const maxWidth = canvas.width - 140;
+                    const words = notes.split('');
+                    let line = '';
+                    const lines = [];
+                    
+                    for (let i = 0; i < words.length; i++) {
+                        const testLine = line + words[i];
+                        const metrics = ctx.measureText(testLine);
+                        if (metrics.width > maxWidth && i > 0) {
+                            lines.push(line);
+                            line = words[i];
+                        } else {
+                            line = testLine;
+                        }
+                    }
+                    lines.push(line);
+                    
+                    ctx.fillText(`备注: ${lines[0]}`, 70, yPos);
+                    for (let i = 1; i < lines.length; i++) {
+                        yPos += 30;
+                        ctx.fillText(lines[i], 120, yPos);
+                    }
+                }
+                
+                // Footer
+                yPos = canvas.height - 100;
+                ctx.fillStyle = '#8b5cf6';
+                ctx.font = 'bold 20px "Noto Sans SC", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('请将此图片发送至QQ群 1048082640 完成下单', canvas.width / 2, yPos);
+                
+                yPos += 35;
+                ctx.font = '16px "Noto Sans SC", sans-serif';
+                ctx.fillStyle = '#6b7280';
+                const now = new Date();
+                ctx.fillText(`生成时间: ${now.toLocaleString('zh-CN')}`, canvas.width / 2, yPos);
+                
+                // Convert to image
+                generatedImageDataUrl = canvas.toDataURL('image/png');
+                
+                // Show success view
+                document.getElementById('checkoutForm').style.display = 'none';
+                document.getElementById('successView').style.display = 'block';
+                
+                const previewDiv = document.getElementById('screenshotPreview');
+                previewDiv.innerHTML = `<img src="${generatedImageDataUrl}" alt="订单图片">`;
+                
+            } catch (error) {
+                console.error('生成图片失败:', error);
+                showNotification('❌ 生成图片失败，请重试');
+                submitBtn.disabled = false;
+                submitBtn.textContent = '生成订单图片';
+            }
+        }
+
+        // Download order image
+        function downloadOrderImage() {
+            if (!generatedImageDataUrl) return;
+            
+            const link = document.createElement('a');
+            const now = new Date();
+            const filename = `指南针商店订单_${now.getFullYear()}${(now.getMonth()+1).toString().padStart(2,'0')}${now.getDate().toString().padStart(2,'0')}_${now.getHours().toString().padStart(2,'0')}${now.getMinutes().toString().padStart(2,'0')}.png`;
+            link.download = filename;
+            link.href = generatedImageDataUrl;
+            link.click();
+            
+            showNotification('✅ 图片已下载');
+        }
+
+        // Reset checkout
+        function resetCheckout() {
+            // Clear form
+            document.getElementById('customerID').value = '';
+            document.getElementById('coordX').value = '';
+            document.getElementById('coordY').value = '';
+            document.getElementById('coordZ').value = '';
+            document.getElementById('dimension').value = '主世界';
+            document.getElementById('orderNotes').value = '';
+            
+            // Reset delivery selection
+            selectedDelivery = 'homeDelivery';
+            document.querySelectorAll('.delivery-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.getElementById('homeDelivery').classList.add('selected');
+            
+            // Reset views
+            document.getElementById('successView').style.display = 'none';
+            document.getElementById('checkoutForm').style.display = 'block';
+            
+            // Reset button
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = false;
+            submitBtn.textContent = '生成订单图片';
+            
+            // Clear cart
+            cartItems = [];
+            updateCartCount();
+            generatedImageDataUrl = null;
+            
+            // Close modal
+            closeCheckoutModal();
+            
+            showNotification('✅ 订单已完成，期待您的下次光临！');
         }
 
         // Show notification
@@ -1205,6 +1561,7 @@
                 z-index: 10000;
                 animation: slideInRight 0.3s ease-out;
                 font-weight: 500;
+                max-width: 300px;
             `;
             document.body.appendChild(notification);
             
@@ -1236,6 +1593,23 @@
             });
         }
 
+        // Add roundRect method for older browsers
+        if (!CanvasRenderingContext2D.prototype.roundRect) {
+            CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+                this.beginPath();
+                this.moveTo(x + radius, y);
+                this.lineTo(x + width - radius, y);
+                this.quadraticCurveTo(x + width, y, x + width, y + radius);
+                this.lineTo(x + width, y + height - radius);
+                this.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+                this.lineTo(x + radius, y + height);
+                this.quadraticCurveTo(x, y + height, x, y + height - radius);
+                this.lineTo(x, y + radius);
+                this.quadraticCurveTo(x, y, x + radius, y);
+                this.closePath();
+            };
+        }
+
         // Add animations CSS
         const style = document.createElement('style');
         style.textContent = `
@@ -1264,16 +1638,16 @@
         document.head.appendChild(style);
 
         // Close modal on outside click
-        document.getElementById('deliveryModal').addEventListener('click', function(e) {
+        document.getElementById('checkoutModal').addEventListener('click', function(e) {
             if (e.target === this) {
-                closeDeliveryModal();
+                closeCheckoutModal();
             }
         });
 
         // Close modal on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                closeDeliveryModal();
+                closeCheckoutModal();
             }
         });
     </script>
