@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⛏️ RR · 物资商店 | 3C大型稀有平价商店 🛒</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-purple: #8b5cf6;
+            --primary-purple-dark: #7c3aed;
+            --bg-main: #f8f7ff;
+            --bg-card: #ffffff;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --success-green: #10b981;
+            --price-orange: #f97316;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f7ff 0%, #e9e4ff 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.8rem;
+            transition: transform 0.2s;
+        }
+        
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--price-orange);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-purple-dark) 100%);
+            color: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        
+        .hero-qq {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--primary-purple);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Highlights */
+        .highlights {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .highlights h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .highlights ul {
+            list-style: none;
+        }
+        
+        .highlights li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .highlights li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-purple);
+            font-size: 1.5rem;
+        }
+        
+        /* Products Grid */
+        .products-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+        
+        .search-bar {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            font-family: 'Noto Sans SC', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--primary-purple);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--price-orange);
+            margin-bottom: 15px;
+        }
+        
+        .product-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn-add-cart {
+            flex: 1;
+            padding: 10px;
+            background: var(--primary-purple);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .btn-add-cart:hover {
+            background: var(--primary-purple-dark);
+        }
+        
+        .btn-view-details {
+            padding: 10px 15px;
+            background: transparent;
+            color: var(--primary-purple);
+            border: 2px solid var(--primary-purple);
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .btn-view-details:hover {
+            background: var(--primary-purple);
+            color: white;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .modal-content {
+            background: var(--bg-card);
+            border-radius: 24px;
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        
+        .modal-close:hover {
+            color: var(--text-primary);
+        }
+        
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--text-primary);
+        }
+        
+        .delivery-option {
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .delivery-option:hover {
+            border-color: var(--primary-purple);
+            background: rgba(139, 92, 246, 0.05);
+        }
+        
+        .delivery-option.selected {
+            border-color: var(--primary-purple);
+            background: rgba(139, 92, 246, 0.1);
+        }
+        
+        .delivery-option-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .delivery-icon {
+            font-size: 2rem;
+        }
+        
+        .delivery-info {
+            flex: 1;
+        }
+        
+        .delivery-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .delivery-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--success-green);
+        }
+        
+        .delivery-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding-left: 55px;
+        }
+        
+        .check-mark {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .delivery-option.selected .check-mark {
+            background: var(--primary-purple);
+            border-color: var(--primary-purple);
+            color: white;
+        }
+        
+        .check-mark::after {
+            content: "✓";
+            font-size: 1rem;
+            font-weight: 700;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .delivery-option.selected .check-mark::after {
+            opacity: 1;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn-modal {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .btn-modal-primary {
+            background: var(--primary-purple);
+            color: white;
+        }
+        
+        .btn-modal-primary:hover {
+            background: var(--primary-purple-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-modal-secondary {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 2px solid var(--border-color);
+        }
+        
+        .btn-modal-secondary:hover {
+            border-color: var(--text-primary);
+            color: var(--text-primary);
+        }
+        
+        /* Floating Cart Button */
+        .floating-cart {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-purple);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-xl);
+            transition: all 0.3s;
+            z-index: 100;
+        }
+        
+        .floating-cart:hover {
+            transform: scale(1.1);
+            background: var(--primary-purple-dark);
+        }
+        
+        .floating-cart .cart-badge {
+            top: -5px;
+            right: -5px;
+        }
+        
+        /* Promotional Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .promo-banner h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            margin-top: 60px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+            
+            .floating-cart {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>⛏️ RR · 物资商店</h1>
+            <div class="cart-icon" onclick="openCartModal()">
+                🛒
+                <span class="cart-badge" id="cartCount">0</span>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                <span style="font-size: 2rem;">✨</span>
+                <span style="font-size: 1.3rem; font-weight: 600;">ruirui</span>
+            </div>
+            <h2>为您提供平价稀有物资</h2>
+            <p class="hero-subtitle">稀有物资大本营，价格亲民童叟无欺。</p>
+            <p class="hero-qq">QQ群 1055741131</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToProducts()">开始选购</button>
+                <button class="btn btn-secondary">活动</button>
+                <button class="btn btn-secondary">♻️ 回收</button>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="highlights">
+            <h3>亮点</h3>
+            <ul>
+                <li>别人没有的，ruirui有！还不贵！</li>
+                <li>主世界8w内免配送费（如订单金额不足5元则主世界3w内随机坐标埋藏自提）</li>
+                <li>购买大量时可16w内包邮送货</li>
+                <li>购买后送达最快2分钟，通常半小时内送达</li>
+                <li>下单后请备注您的收货坐标，收货维度，收货人ID</li>
+                <li>如需其他列表上没有的物资可联系群主咨询</li>
+            </ul>
+            <p style="margin-top: 20px; color: var(--text-secondary);">提示：支持微信、支持支付宝</p>
+        </section>
+
+        <!-- Promotional Banner -->
+        <div class="promo-banner">
+            <h3>🎉 活动</h3>
+            <p>订单满50赠送15/满100送40(自选) · 重锤买二送一，买3送2，买5送5，买10发一盒！限时活动 先到先得 售完即止</p>
+        </div>
+
+        <!-- Products Section -->
+        <section class="products-section" id="products">
+            <h2 class="section-title">热销商品</h2>
+            <input type="text" class="search-bar" placeholder="搜索商品名称或描述..." id="searchInput" oninput="filterProducts()">
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Featured Products -->
+                <div class="product-card" data-name="附魔金苹果" data-desc="限时现货 稀有珍品">
+                    <span class="product-icon">🍎</span>
+                    <div class="product-name">附魔金苹果</div>
+                    <div class="product-desc">限时现货 · 稀有珍品</div>
+                    <div class="product-price">￥12.9 / 组</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('附魔金苹果', 12.9)">加入购物车</button>
+                        <button class="btn-view-details">查看详情</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="金苹果" data-desc="现货">
+                    <span class="product-icon">🍎</span>
+                    <div class="product-name">金苹果</div>
+                    <div class="product-desc">现货</div>
+                    <div class="product-price">￥4.5 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('金苹果', 4.5)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="白板重锤" data-desc="买10个发一盒">
+                    <span class="product-icon">🔨</span>
+                    <div class="product-name">白板重锤</div>
+                    <div class="product-desc">买10个发一盒</div>
+                    <div class="product-price">￥2.8 / 个</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('白板重锤', 2.8)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="破甲重锤" data-desc="破甲 满附魔">
+                    <span class="product-icon">🔨</span>
+                    <div class="product-name">破甲重锤</div>
+                    <div class="product-desc">破甲 · 满附魔</div>
+                    <div class="product-price">￥4.5 / 个</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('破甲重锤', 4.5)">加入购物车</button>
+                        <button class="btn-view-details">查看详情</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="风爆3重锤" data-desc="风爆3破甲 满附魔">
+                    <span class="product-icon">🔨</span>
+                    <div class="product-name">风爆3重锤</div>
+                    <div class="product-desc">风爆3破甲 · 满附魔</div>
+                    <div class="product-price">￥9.9 / 个</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('风爆3重锤', 9.9)">加入购物车</button>
+                        <button class="btn-view-details">查看详情</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="沉重核心" data-desc="地板价 1组起购">
+                    <span class="product-icon">🧊</span>
+                    <div class="product-name">沉重核心</div>
+                    <div class="product-desc">地板价|1组起购</div>
+                    <div class="product-price">￥64 / 组</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('沉重核心', 64)">加入购物车</button>
+                        <button class="btn-view-details">查看详情</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="神龟药水" data-desc="打架必备">
+                    <span class="product-icon">🐢</span>
+                    <div class="product-name">神龟药水</div>
+                    <div class="product-desc">打架必备</div>
+                    <div class="product-price">￥1.9 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('神龟药水', 1.9)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="力量药水II" data-desc="打架必备">
+                    <span class="product-icon">🧪</span>
+                    <div class="product-name">力量药水Ⅱ</div>
+                    <div class="product-desc">打架必备</div>
+                    <div class="product-price">￥0.9 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('力量药水Ⅱ', 0.9)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="白板鞘翅" data-desc="Elytra 无附魔">
+                    <span class="product-icon">🪂</span>
+                    <div class="product-name">白板鞘翅</div>
+                    <div class="product-desc">Elytra · 无附魔</div>
+                    <div class="product-price">￥1.7 / 个</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('白板鞘翅', 1.7)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="满附魔鞘翅" data-desc="耐久3+经修 满附魔">
+                    <span class="product-icon">🪂</span>
+                    <div class="product-name">满附魔鞘翅</div>
+                    <div class="product-desc">耐久3+经修 · 满附魔</div>
+                    <div class="product-price">￥1.9 / 个</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('满附魔鞘翅', 1.9)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="钻石kit" data-desc="附魔鞘翅+钻石全身+钻石剑镐">
+                    <span class="product-icon">💎</span>
+                    <div class="product-name">钻石kit</div>
+                    <div class="product-desc">附魔鞘翅+钻石全身+钻石剑镐</div>
+                    <div class="product-price">￥4.9 / 套</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('钻石kit', 4.9)">加入购物车</button>
+                        <button class="btn-view-details">查看详情</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="下界合金kit" data-desc="全新打造">
+                    <span class="product-icon">⚔️</span>
+                    <div class="product-name">下界合金kit</div>
+                    <div class="product-desc">全新打造</div>
+                    <div class="product-price">￥6.8 / 套</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('下界合金kit', 6.8)">加入购物车</button>
+                        <button class="btn-view-details">查看详情</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="经验瓶" data-desc="xp 居家旅行必备">
+                    <span class="product-icon">🧪</span>
+                    <div class="product-name">经验瓶</div>
+                    <div class="product-desc">xp 居家旅行必备</div>
+                    <div class="product-price">￥2.9 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('经验瓶', 2.9)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="不死图腾" data-desc="保命神器">
+                    <span class="product-icon">🗿</span>
+                    <div class="product-name">不死图腾</div>
+                    <div class="product-desc">保命神器</div>
+                    <div class="product-price">￥0.3 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('不死图腾', 0.3)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="潜影壳" data-desc="居家旅行必备">
+                    <span class="product-icon">📦</span>
+                    <div class="product-name">潜影壳</div>
+                    <div class="product-desc">居家旅行必备</div>
+                    <div class="product-price">￥4.9 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('潜影壳', 4.9)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="末地水晶" data-desc="End Crystal">
+                    <span class="product-icon">💎</span>
+                    <div class="product-name">末地水晶</div>
+                    <div class="product-desc">End Crystal</div>
+                    <div class="product-price">￥9.9 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('末地水晶', 9.9)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="信标" data-desc="Beacon 特殊功能方块">
+                    <span class="product-icon">🔦</span>
+                    <div class="product-name">信标</div>
+                    <div class="product-desc">Beacon · 特殊功能方块</div>
+                    <div class="product-price">￥60 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('信标', 60)">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="凋灵骷髅头颅" data-desc="凋零!">
+                    <span class="product-icon">💀</span>
+                    <div class="product-name">凋灵骷髅头颅</div>
+                    <div class="product-desc">凋零!</div>
+                    <div class="product-price">￥14.9 / 盒</div>
+                    <div class="product-buttons">
+                        <button class="btn-add-cart" onclick="addToCart('凋灵骷髅头颅', 14.9)">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 @ruirui • 大型稀有平价商店。</p>
+            <p style="margin-top: 10px;">我们的目标</p>
+            <p>提高物资流通效率 · 保证商店长期稳定运营</p>
+        </footer>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" onclick="openCartModal()">
+        🛒
+        <span class="cart-badge" id="floatingCartCount">0</span>
+    </div>
+
+    <!-- Delivery Modal -->
+    <div class="modal" id="deliveryModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDeliveryModal()">✕</button>
+            <h2 class="modal-title">📦 选择配送方式</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 25px; font-size: 0.95rem;">
+                请选择您希望的配送方式，订单金额不足5元仅支持自提。
+            </p>
+            
+            <div class="delivery-option" id="selfPickup" onclick="selectDelivery('selfPickup')">
+                <div class="delivery-option-header">
+                    <span class="delivery-icon">🚶</span>
+                    <div class="delivery-info">
+                        <div class="delivery-name">随机坐标自提</div>
+                        <div class="delivery-price">免费</div>
+                    </div>
+                    <div class="check-mark"></div>
+                </div>
+                <div class="delivery-desc">
+                    在主世界3万内随机坐标埋藏自提，免费配送
+                </div>
+            </div>
+
+            <div class="delivery-option" id="homeDelivery" onclick="selectDelivery('homeDelivery')">
+                <div class="delivery-option-header">
+                    <span class="delivery-icon">🚚</span>
+                    <div class="delivery-info">
+                        <div class="delivery-name">送货上门</div>
+                        <div class="delivery-price">免费</div>
+                    </div>
+                    <div class="check-mark"></div>
+                </div>
+                <div class="delivery-desc">
+                    主世界8万内包邮送货上门, 超出部分运费每2w/1R
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-modal btn-modal-secondary" onclick="closeDeliveryModal()">取消</button>
+                <button class="btn-modal btn-modal-primary" onclick="confirmDelivery()">下一步：确认订单</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cart state
+        let cartItems = [];
+        let selectedDelivery = null;
+
+        // Add to cart function
+        function addToCart(name, price) {
+            const existingItem = cartItems.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cartItems.push({ name, price, quantity: 1 });
+            }
+            updateCartCount();
+            showNotification(`${name} 已加入购物车`);
+        }
+
+        // Update cart count
+        function updateCartCount() {
+            const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+            document.getElementById('floatingCartCount').textContent = totalItems;
+        }
+
+        // Open cart modal (checkout)
+        function openCartModal() {
+            if (cartItems.length === 0) {
+                showNotification('购物车为空');
+                return;
+            }
+            openDeliveryModal();
+        }
+
+        // Open delivery modal
+        function openDeliveryModal() {
+            document.getElementById('deliveryModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close delivery modal
+        function closeDeliveryModal() {
+            document.getElementById('deliveryModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            selectedDelivery = null;
+            document.querySelectorAll('.delivery-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+        }
+
+        // Select delivery option
+        function selectDelivery(optionId) {
+            selectedDelivery = optionId;
+            document.querySelectorAll('.delivery-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.getElementById(optionId).classList.add('selected');
+        }
+
+        // Confirm delivery
+        function confirmDelivery() {
+            if (!selectedDelivery) {
+                showNotification('请选择配送方式');
+                return;
+            }
+            
+            const deliveryName = selectedDelivery === 'selfPickup' ? '随机坐标自提' : '送货上门';
+            const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
+            
+            showNotification(`已选择${deliveryName}，订单总额：￥${totalPrice}，即将跳转支付...`);
+            
+            setTimeout(() => {
+                closeDeliveryModal();
+                cartItems = [];
+                updateCartCount();
+            }, 2000);
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: white;
+                padding: 15px 25px;
+                border-radius: 12px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                z-index: 10000;
+                animation: slideInRight 0.3s ease-out;
+                font-weight: 500;
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.3s ease-out';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Scroll to products
+        function scrollToProducts() {
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Filter products
+        function filterProducts() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                const name = card.getAttribute('data-name').toLowerCase();
+                const desc = card.getAttribute('data-desc').toLowerCase();
+                
+                if (name.includes(searchTerm) || desc.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Add animations CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Close modal on outside click
+        document.getElementById('deliveryModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeDeliveryModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDeliveryModal();
+            }
+        });
+    </script>
+</body>
+</html>
