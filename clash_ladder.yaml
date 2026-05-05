@@ -1,7 +1,7 @@
 #
 #-------------------------------------------------------------#
 #  创建者：https://v2rayse.com
-#  创建时间：2026-05-05 22:09:57
+#  创建时间：2026-05-06 01:59:37
 #  模版：v2rayse默认模版
 #  节点数量：70
 #-------------------------------------------------------------#
@@ -81,8 +81,8 @@ proxies:
   - {"type":"vmess","name":"美国(yudou789.top玉豆免费节点)_2","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"美国342频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"韩国643频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vmess","name":"4k线路vmess-ws-tls-argo-germany","ws-opts":{"path":"/6e940af3-f035-48b2-b930-2a8cc99d89c5-vm","headers":{"host":"desperate-wave-solutions-honey.trycloudflare.com"}},"server":"yg1.ygkkk.dpdns.org","port":"443","uuid":"6e940af3-f035-48b2-b930-2a8cc99d89c5","alterId":"0","cipher":"auto","network":"ws","tls":true}
-  - {"type":"vmess","name":"vmess-ws-tls-argo-47988b7e-7511-43e9-be76-5dd31e3bc00b-443","ws-opts":{"path":"/f77cbda9-a5da-4691-a453-59ea24516dee-vm","headers":{"host":"humanities-public-necklace-bite.trycloudflare.com"}},"server":"yg1.ygkkk.dpdns.org","port":"443","uuid":"f77cbda9-a5da-4691-a453-59ea24516dee","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vless","name":"4k线路vless-ws-tls-argo-germany","server":"yg9.ygkkk.dpdns.org","port":443,"uuid":"e52ccb0a-1bab-4c6c-a1a9-1a6e9e918135","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"refers-gerald-females-majority.trycloudflare.com","ws-opts":{"path":"e52ccb0a-1bab-4c6c-a1a9-1a6e9e918135-vw","headers":{"host":"refers-gerald-females-majority.trycloudflare.com"}}}
+  - {"type":"vless","name":"vless-runmyapp","server":"yg1.ygkkk.dpdns.org","port":443,"uuid":"df056de4-ead8-4a71-9cd5-db7dfd248d85","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"lyric-optimum-single-invest.trycloudflare.com","ws-opts":{"path":"df056de4-ead8-4a71-9cd5-db7dfd248d85-vw","headers":{"host":"lyric-optimum-single-invest.trycloudflare.com"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -157,8 +157,8 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vmess-ws-tls-argo-germany
-      - vmess-ws-tls-argo-47988b7e-7511-43e9-be76-5dd31e3bc00b-443
+      - 4k线路vless-ws-tls-argo-germany
+      - vless-runmyapp
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -233,8 +233,8 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vmess-ws-tls-argo-germany
-      - vmess-ws-tls-argo-47988b7e-7511-43e9-be76-5dd31e3bc00b-443
+      - 4k线路vless-ws-tls-argo-germany
+      - vless-runmyapp
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -309,8 +309,8 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vmess-ws-tls-argo-germany
-      - vmess-ws-tls-argo-47988b7e-7511-43e9-be76-5dd31e3bc00b-443
+      - 4k线路vless-ws-tls-argo-germany
+      - vless-runmyapp
   - name: 📲 电报信息
     type: select
     proxies:
@@ -384,8 +384,8 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vmess-ws-tls-argo-germany
-      - vmess-ws-tls-argo-47988b7e-7511-43e9-be76-5dd31e3bc00b-443
+      - 4k线路vless-ws-tls-argo-germany
+      - vless-runmyapp
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -459,8 +459,8 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vmess-ws-tls-argo-germany
-      - vmess-ws-tls-argo-47988b7e-7511-43e9-be76-5dd31e3bc00b-443
+      - 4k线路vless-ws-tls-argo-germany
+      - vless-runmyapp
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -534,8 +534,8 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vmess-ws-tls-argo-germany
-      - vmess-ws-tls-argo-47988b7e-7511-43e9-be76-5dd31e3bc00b-443
+      - 4k线路vless-ws-tls-argo-germany
+      - vless-runmyapp
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -626,8 +626,8 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vmess-ws-tls-argo-germany
-      - vmess-ws-tls-argo-47988b7e-7511-43e9-be76-5dd31e3bc00b-443
+      - 4k线路vless-ws-tls-argo-germany
+      - vless-runmyapp
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
