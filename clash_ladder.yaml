@@ -1,9 +1,9 @@
 #
 #-------------------------------------------------------------#
 #  创建者：https://v2rayse.com
-#  创建时间：2026-05-06 01:59:37
+#  创建时间：2026-05-23 21:05:25
 #  模版：v2rayse默认模版
-#  节点数量：70
+#  节点数量：82
 #-------------------------------------------------------------#
 #
 port: 7890
@@ -13,48 +13,30 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"type":"vless","name":"随机30频道：@jichangdl","server":"104.18.46.50","port":443,"uuid":"3264ccbe-dbc5-4d14-8dbe-1c62041cc43f","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"sk-hk1.feimavip.sbs","ws-opts":{"path":"/hk/1","headers":{"host":"sk-hk1.feimavip.sbs"}}}
   - {"type":"vmess","name":"🇬🇧GB_41","server":"82.198.246.37","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vmess","name":"香港533频道：@jichangdl","server":"v30.hdacd.com","port":"30830","uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"🇬🇧GB-82.38.31.217-0231","server":"82.38.31.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"type":"vmess","name":"香港89频道：@jichangdl","server":"v30.hdacd.com","port":"30830","uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vmess","name":"美国715频道：@jichangdl","server":"v30.hdacd.com","port":"30830","uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vless","name":"德国855频道：@jichangdl","server":"finl9.keepsecured.net","port":443,"uuid":"b6ce8a51-19b9-4979-91ba-b4298c26d5fc","skip-cert-verify":true,"network":"tcp","flow":"xtls-rprx-vision","servername":"finl9.keepsecured.net","tls":true,"udp":true}
-  - {"type":"vmess","name":"美国383频道：@jichangdl","server":"v30.hdacd.com","port":"30830","uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"trojan","name":"荷兰450频道：@jichangdl","server":"hl-freedom-1.undef.network","port":443,"password":"JaFKnqNcvnBT63t3rquidGsln","udp":true,"skip-cert-verify":true,"sni":"HL-FREEDOM-1.UNDEF.NETWORK","network":"ws","ws-opts":{"path":"/f2fc2a1f","headers":{"host":"hl-freedom-1.undef.network"}}}
-  - {"type":"vmess","name":"马来西亚589频道：@jichangdl","server":"v30.hdacd.com","port":"30830","uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"英国316频道：@jichangdl_1","server":"82.198.246.250","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"美国49频道：@jichangdl","server":"82.198.246.233","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"英国319频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"🇬🇧GB-82.38.31.217-0199","server":"82.38.31.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
   - {"type":"vmess","name":"德国567频道：@jichangdl","server":"82.198.246.233","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"英国678频道：@jichangdl","server":"82.198.246.250","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"auto"}
-  - {"type":"ss","name":"英国225频道：@jichangdl","server":"82.38.31.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
   - {"type":"vmess","name":"德国577频道：@jichangdl","server":"82.198.246.250","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"德国153频道：@jichangdl","server":"82.198.246.233","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"🇬🇧GB_43","server":"82.198.246.233","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"英国797频道：@jichangdl","server":"82.38.31.214","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
   - {"type":"vmess","name":"德国550频道：@jichangdl","server":"82.198.246.250","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%","server":"82.198.246.250","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vless","name":"波兰966频道：@jichangdl","server":"pl74.mechvpn.online","port":443,"uuid":"6d916d55-fead-4ff3-a3a9-83e175ea8ad7","skip-cert-verify":true,"network":"tcp","flow":"xtls-rprx-vision","servername":"pl74.mechvpn.online","tls":true,"udp":true}
-  - {"type":"vless","name":"🇳🇱荷兰|NLD","server":"94.228.219.45","port":443,"uuid":"f189684b-6213-4c0d-a2e3-cb8860f5d4c5","skip-cert-verify":true,"network":"tcp","flow":"xtls-rprx-vision","servername":"hls-svod.itunes.apple.com","tls":false,"udp":true}
   - {"type":"vmess","name":"德国117频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"NL荷兰(mibei77.com米贝节点分享)","server":"82.198.246.250","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"GB英国(mibei77.com米贝节点分享)_1","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"🇬🇧GB_39","server":"82.198.246.250","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"🇬🇧GB-82.38.31.89-0189","server":"82.38.31.89","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
   - {"type":"vmess","name":"英国269频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"GB英国(mibei77.com米贝节点分享)_2","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"英国(yudou789.top玉豆免费节点)_1","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"英国273频道：@jichangdl","server":"82.38.31.89","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
   - {"type":"vmess","name":"德国907频道：@jichangdl","server":"82.198.246.214","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vless","name":"瑞士43频道：@jichangdl","server":"138.124.9.190","port":16558,"uuid":"11348c0f-b646-446a-bad7-b2b39c6de767","skip-cert-verify":true,"network":"tcp","flow":"xtls-rprx-vision","servername":"gpuopen.com","tls":false,"udp":true}
   - {"type":"vmess","name":"英国557频道：@jichangdl","server":"82.198.246.250","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"英国806频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"英国778频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"美国(yudou789.top玉豆免费节点)_1","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vless","name":"荷兰693频道：@jichangdl","server":"94.228.219.45","port":443,"uuid":"f189684b-6213-4c0d-a2e3-cb8860f5d4c5","skip-cert-verify":true,"network":"tcp","flow":"xtls-rprx-vision","servername":"hls-svod.itunes.apple.com","tls":false,"udp":true}
-  - {"type":"vless","name":"德国591频道：@jichangdl","server":"finl9.keepsecured.net","port":443,"uuid":"b6ce8a51-19b9-4979-91ba-b4298c26d5fc","skip-cert-verify":true,"network":"tcp","flow":"xtls-rprx-vision-udp443","servername":"finl9.keepsecured.net","tls":true,"udp":true}
   - {"type":"vmess","name":"US美国(mibei77.com米贝节点分享)_1","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"英国316频道：@jichangdl_2","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"英国732频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
@@ -81,56 +63,68 @@ proxies:
   - {"type":"vmess","name":"美国(yudou789.top玉豆免费节点)_2","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"美国342频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"韩国643频道：@jichangdl","server":"82.198.246.97","port":"180","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vless","name":"4k线路vless-ws-tls-argo-germany","server":"yg9.ygkkk.dpdns.org","port":443,"uuid":"e52ccb0a-1bab-4c6c-a1a9-1a6e9e918135","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"refers-gerald-females-majority.trycloudflare.com","ws-opts":{"path":"e52ccb0a-1bab-4c6c-a1a9-1a6e9e918135-vw","headers":{"host":"refers-gerald-females-majority.trycloudflare.com"}}}
-  - {"type":"vless","name":"vless-runmyapp","server":"yg1.ygkkk.dpdns.org","port":443,"uuid":"df056de4-ead8-4a71-9cd5-db7dfd248d85","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"lyric-optimum-single-invest.trycloudflare.com","ws-opts":{"path":"df056de4-ead8-4a71-9cd5-db7dfd248d85-vw","headers":{"host":"lyric-optimum-single-invest.trycloudflare.com"}}}
+  - {"type":"vless","name":"联通-SJC-443-WS-TLS-01","server":"104.17.152.107","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"联通-LAX-443-WS-TLS-03","server":"173.245.59.51","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"联通-LAX-80-WS-08","server":"104.16.32.175","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-443-WS-TLS-03","server":"104.25.255.96","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"联通-SJC-80-WS-02","server":"104.17.152.107","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"联通-LAX-443-WS-TLS-05","server":"104.25.173.175","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"联通-LAX-443-WS-TLS-07","server":"104.16.32.175","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-443-WS-TLS-07","server":"172.64.35.191","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"联通-LAX-80-WS-06","server":"104.25.173.175","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-80-WS-02","server":"162.159.17.170","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-80-WS-06","server":"172.64.35.104","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-80-WS-08","server":"104.25.246.235","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-80-WS-10","server":"172.66.3.24","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"联通-LAX-80-WS-04","server":"173.245.59.51","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-80-WS-04","server":"162.159.6.219","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-80-WS-08","server":"172.64.35.191","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-443-WS-TLS-03","server":"162.159.6.219","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-80-WS-04","server":"104.25.255.96","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"联通-LAX-80-WS-02","server":"104.18.233.182","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-443-WS-TLS-05","server":"172.64.35.104","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-80-WS-10","server":"162.159.61.122","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"联通-LAX-443-WS-TLS-01","server":"104.18.233.182","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-443-WS-TLS-09","server":"172.66.3.24","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-443-WS-TLS-05","server":"104.25.249.151","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-443-WS-TLS-01","server":"162.159.17.170","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-80-WS-06","server":"104.25.249.151","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-443-WS-TLS-07","server":"104.25.246.235","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"电信-SIN-443-WS-TLS-09","server":"162.159.61.122","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-443-WS-TLS-01","server":"104.21.93.20","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"移动-HKG-80-WS-02","server":"104.21.93.20","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"silent-snow-2566.benjamin920101.workers.dev","ws-opts":{"path":"/?ed=2048","headers":{"host":"silent-snow-2566.benjamin920101.workers.dev"}}}
+  - {"type":"vless","name":"vless-ws-tls-argo-enc-vision-CT600","server":"yg1.ygkkk.dpdns.org","port":443,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"backing-rent-gcc-router.trycloudflare.com","ws-opts":{"path":"c43aa956-40b1-424e-ac18-c70738f4d1ff-vw","headers":{"host":"backing-rent-gcc-router.trycloudflare.com"}}}
+  - {"type":"vless","name":"vless-ws-argo-enc-vision-CT600","server":"yg6.ygkkk.dpdns.org","port":80,"uuid":"c43aa956-40b1-424e-ac18-c70738f4d1ff","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"backing-rent-gcc-router.trycloudflare.com","ws-opts":{"path":"c43aa956-40b1-424e-ac18-c70738f4d1ff-vw","headers":{"host":"backing-rent-gcc-router.trycloudflare.com"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 随机30频道：@jichangdl
       - 🇬🇧GB_41
-      - 香港533频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0231
-      - 香港89频道：@jichangdl
-      - 美国715频道：@jichangdl
-      - 德国855频道：@jichangdl
-      - 美国383频道：@jichangdl
-      - 荷兰450频道：@jichangdl
-      - 马来西亚589频道：@jichangdl
       - 英国316频道：@jichangdl_1
       - 美国49频道：@jichangdl
       - 英国319频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0199
       - 德国567频道：@jichangdl
       - 英国678频道：@jichangdl
-      - 英国225频道：@jichangdl
       - 德国577频道：@jichangdl
       - 德国153频道：@jichangdl
       - 🇬🇧GB_43
-      - 英国797频道：@jichangdl
       - 德国550频道：@jichangdl
       - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
       - 波兰966频道：@jichangdl
-      - 🇳🇱荷兰|NLD
       - 德国117频道：@jichangdl
       - NL荷兰(mibei77.com米贝节点分享)
       - GB英国(mibei77.com米贝节点分享)_1
       - 🇬🇧GB_39
-      - 🇬🇧GB-82.38.31.89-0189
       - 英国269频道：@jichangdl
       - GB英国(mibei77.com米贝节点分享)_2
       - 英国(yudou789.top玉豆免费节点)_1
-      - 英国273频道：@jichangdl
       - 德国907频道：@jichangdl
-      - 瑞士43频道：@jichangdl
       - 英国557频道：@jichangdl
       - 英国806频道：@jichangdl
       - 英国778频道：@jichangdl
       - 美国(yudou789.top玉豆免费节点)_1
-      - 荷兰693频道：@jichangdl
-      - 德国591频道：@jichangdl
       - US美国(mibei77.com米贝节点分享)_1
       - 英国316频道：@jichangdl_2
       - 英国732频道：@jichangdl
@@ -157,56 +151,68 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vless-ws-tls-argo-germany
-      - vless-runmyapp
+      - 联通-SJC-443-WS-TLS-01
+      - 联通-LAX-443-WS-TLS-03
+      - 联通-LAX-80-WS-08
+      - 移动-HKG-443-WS-TLS-03
+      - 联通-SJC-80-WS-02
+      - 联通-LAX-443-WS-TLS-05
+      - 联通-LAX-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-07
+      - 联通-LAX-80-WS-06
+      - 电信-SIN-80-WS-02
+      - 电信-SIN-80-WS-06
+      - 移动-HKG-80-WS-08
+      - 移动-HKG-80-WS-10
+      - 联通-LAX-80-WS-04
+      - 电信-SIN-80-WS-04
+      - 电信-SIN-80-WS-08
+      - 电信-SIN-443-WS-TLS-03
+      - 移动-HKG-80-WS-04
+      - 联通-LAX-80-WS-02
+      - 电信-SIN-443-WS-TLS-05
+      - 电信-SIN-80-WS-10
+      - 联通-LAX-443-WS-TLS-01
+      - 移动-HKG-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-05
+      - 电信-SIN-443-WS-TLS-01
+      - 移动-HKG-80-WS-06
+      - 移动-HKG-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-01
+      - 移动-HKG-80-WS-02
+      - vless-ws-tls-argo-enc-vision-CT600
+      - vless-ws-argo-enc-vision-CT600
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 随机30频道：@jichangdl
       - 🇬🇧GB_41
-      - 香港533频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0231
-      - 香港89频道：@jichangdl
-      - 美国715频道：@jichangdl
-      - 德国855频道：@jichangdl
-      - 美国383频道：@jichangdl
-      - 荷兰450频道：@jichangdl
-      - 马来西亚589频道：@jichangdl
       - 英国316频道：@jichangdl_1
       - 美国49频道：@jichangdl
       - 英国319频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0199
       - 德国567频道：@jichangdl
       - 英国678频道：@jichangdl
-      - 英国225频道：@jichangdl
       - 德国577频道：@jichangdl
       - 德国153频道：@jichangdl
       - 🇬🇧GB_43
-      - 英国797频道：@jichangdl
       - 德国550频道：@jichangdl
       - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
       - 波兰966频道：@jichangdl
-      - 🇳🇱荷兰|NLD
       - 德国117频道：@jichangdl
       - NL荷兰(mibei77.com米贝节点分享)
       - GB英国(mibei77.com米贝节点分享)_1
       - 🇬🇧GB_39
-      - 🇬🇧GB-82.38.31.89-0189
       - 英国269频道：@jichangdl
       - GB英国(mibei77.com米贝节点分享)_2
       - 英国(yudou789.top玉豆免费节点)_1
-      - 英国273频道：@jichangdl
       - 德国907频道：@jichangdl
-      - 瑞士43频道：@jichangdl
       - 英国557频道：@jichangdl
       - 英国806频道：@jichangdl
       - 英国778频道：@jichangdl
       - 美国(yudou789.top玉豆免费节点)_1
-      - 荷兰693频道：@jichangdl
-      - 德国591频道：@jichangdl
       - US美国(mibei77.com米贝节点分享)_1
       - 英国316频道：@jichangdl_2
       - 英国732频道：@jichangdl
@@ -233,56 +239,68 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vless-ws-tls-argo-germany
-      - vless-runmyapp
+      - 联通-SJC-443-WS-TLS-01
+      - 联通-LAX-443-WS-TLS-03
+      - 联通-LAX-80-WS-08
+      - 移动-HKG-443-WS-TLS-03
+      - 联通-SJC-80-WS-02
+      - 联通-LAX-443-WS-TLS-05
+      - 联通-LAX-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-07
+      - 联通-LAX-80-WS-06
+      - 电信-SIN-80-WS-02
+      - 电信-SIN-80-WS-06
+      - 移动-HKG-80-WS-08
+      - 移动-HKG-80-WS-10
+      - 联通-LAX-80-WS-04
+      - 电信-SIN-80-WS-04
+      - 电信-SIN-80-WS-08
+      - 电信-SIN-443-WS-TLS-03
+      - 移动-HKG-80-WS-04
+      - 联通-LAX-80-WS-02
+      - 电信-SIN-443-WS-TLS-05
+      - 电信-SIN-80-WS-10
+      - 联通-LAX-443-WS-TLS-01
+      - 移动-HKG-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-05
+      - 电信-SIN-443-WS-TLS-01
+      - 移动-HKG-80-WS-06
+      - 移动-HKG-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-01
+      - 移动-HKG-80-WS-02
+      - vless-ws-tls-argo-enc-vision-CT600
+      - vless-ws-argo-enc-vision-CT600
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 随机30频道：@jichangdl
       - 🇬🇧GB_41
-      - 香港533频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0231
-      - 香港89频道：@jichangdl
-      - 美国715频道：@jichangdl
-      - 德国855频道：@jichangdl
-      - 美国383频道：@jichangdl
-      - 荷兰450频道：@jichangdl
-      - 马来西亚589频道：@jichangdl
       - 英国316频道：@jichangdl_1
       - 美国49频道：@jichangdl
       - 英国319频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0199
       - 德国567频道：@jichangdl
       - 英国678频道：@jichangdl
-      - 英国225频道：@jichangdl
       - 德国577频道：@jichangdl
       - 德国153频道：@jichangdl
       - 🇬🇧GB_43
-      - 英国797频道：@jichangdl
       - 德国550频道：@jichangdl
       - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
       - 波兰966频道：@jichangdl
-      - 🇳🇱荷兰|NLD
       - 德国117频道：@jichangdl
       - NL荷兰(mibei77.com米贝节点分享)
       - GB英国(mibei77.com米贝节点分享)_1
       - 🇬🇧GB_39
-      - 🇬🇧GB-82.38.31.89-0189
       - 英国269频道：@jichangdl
       - GB英国(mibei77.com米贝节点分享)_2
       - 英国(yudou789.top玉豆免费节点)_1
-      - 英国273频道：@jichangdl
       - 德国907频道：@jichangdl
-      - 瑞士43频道：@jichangdl
       - 英国557频道：@jichangdl
       - 英国806频道：@jichangdl
       - 英国778频道：@jichangdl
       - 美国(yudou789.top玉豆免费节点)_1
-      - 荷兰693频道：@jichangdl
-      - 德国591频道：@jichangdl
       - US美国(mibei77.com米贝节点分享)_1
       - 英国316频道：@jichangdl_2
       - 英国732频道：@jichangdl
@@ -309,55 +327,67 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vless-ws-tls-argo-germany
-      - vless-runmyapp
+      - 联通-SJC-443-WS-TLS-01
+      - 联通-LAX-443-WS-TLS-03
+      - 联通-LAX-80-WS-08
+      - 移动-HKG-443-WS-TLS-03
+      - 联通-SJC-80-WS-02
+      - 联通-LAX-443-WS-TLS-05
+      - 联通-LAX-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-07
+      - 联通-LAX-80-WS-06
+      - 电信-SIN-80-WS-02
+      - 电信-SIN-80-WS-06
+      - 移动-HKG-80-WS-08
+      - 移动-HKG-80-WS-10
+      - 联通-LAX-80-WS-04
+      - 电信-SIN-80-WS-04
+      - 电信-SIN-80-WS-08
+      - 电信-SIN-443-WS-TLS-03
+      - 移动-HKG-80-WS-04
+      - 联通-LAX-80-WS-02
+      - 电信-SIN-443-WS-TLS-05
+      - 电信-SIN-80-WS-10
+      - 联通-LAX-443-WS-TLS-01
+      - 移动-HKG-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-05
+      - 电信-SIN-443-WS-TLS-01
+      - 移动-HKG-80-WS-06
+      - 移动-HKG-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-01
+      - 移动-HKG-80-WS-02
+      - vless-ws-tls-argo-enc-vision-CT600
+      - vless-ws-argo-enc-vision-CT600
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 随机30频道：@jichangdl
       - 🇬🇧GB_41
-      - 香港533频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0231
-      - 香港89频道：@jichangdl
-      - 美国715频道：@jichangdl
-      - 德国855频道：@jichangdl
-      - 美国383频道：@jichangdl
-      - 荷兰450频道：@jichangdl
-      - 马来西亚589频道：@jichangdl
       - 英国316频道：@jichangdl_1
       - 美国49频道：@jichangdl
       - 英国319频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0199
       - 德国567频道：@jichangdl
       - 英国678频道：@jichangdl
-      - 英国225频道：@jichangdl
       - 德国577频道：@jichangdl
       - 德国153频道：@jichangdl
       - 🇬🇧GB_43
-      - 英国797频道：@jichangdl
       - 德国550频道：@jichangdl
       - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
       - 波兰966频道：@jichangdl
-      - 🇳🇱荷兰|NLD
       - 德国117频道：@jichangdl
       - NL荷兰(mibei77.com米贝节点分享)
       - GB英国(mibei77.com米贝节点分享)_1
       - 🇬🇧GB_39
-      - 🇬🇧GB-82.38.31.89-0189
       - 英国269频道：@jichangdl
       - GB英国(mibei77.com米贝节点分享)_2
       - 英国(yudou789.top玉豆免费节点)_1
-      - 英国273频道：@jichangdl
       - 德国907频道：@jichangdl
-      - 瑞士43频道：@jichangdl
       - 英国557频道：@jichangdl
       - 英国806频道：@jichangdl
       - 英国778频道：@jichangdl
       - 美国(yudou789.top玉豆免费节点)_1
-      - 荷兰693频道：@jichangdl
-      - 德国591频道：@jichangdl
       - US美国(mibei77.com米贝节点分享)_1
       - 英国316频道：@jichangdl_2
       - 英国732频道：@jichangdl
@@ -384,55 +414,67 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vless-ws-tls-argo-germany
-      - vless-runmyapp
+      - 联通-SJC-443-WS-TLS-01
+      - 联通-LAX-443-WS-TLS-03
+      - 联通-LAX-80-WS-08
+      - 移动-HKG-443-WS-TLS-03
+      - 联通-SJC-80-WS-02
+      - 联通-LAX-443-WS-TLS-05
+      - 联通-LAX-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-07
+      - 联通-LAX-80-WS-06
+      - 电信-SIN-80-WS-02
+      - 电信-SIN-80-WS-06
+      - 移动-HKG-80-WS-08
+      - 移动-HKG-80-WS-10
+      - 联通-LAX-80-WS-04
+      - 电信-SIN-80-WS-04
+      - 电信-SIN-80-WS-08
+      - 电信-SIN-443-WS-TLS-03
+      - 移动-HKG-80-WS-04
+      - 联通-LAX-80-WS-02
+      - 电信-SIN-443-WS-TLS-05
+      - 电信-SIN-80-WS-10
+      - 联通-LAX-443-WS-TLS-01
+      - 移动-HKG-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-05
+      - 电信-SIN-443-WS-TLS-01
+      - 移动-HKG-80-WS-06
+      - 移动-HKG-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-01
+      - 移动-HKG-80-WS-02
+      - vless-ws-tls-argo-enc-vision-CT600
+      - vless-ws-argo-enc-vision-CT600
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 随机30频道：@jichangdl
       - 🇬🇧GB_41
-      - 香港533频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0231
-      - 香港89频道：@jichangdl
-      - 美国715频道：@jichangdl
-      - 德国855频道：@jichangdl
-      - 美国383频道：@jichangdl
-      - 荷兰450频道：@jichangdl
-      - 马来西亚589频道：@jichangdl
       - 英国316频道：@jichangdl_1
       - 美国49频道：@jichangdl
       - 英国319频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0199
       - 德国567频道：@jichangdl
       - 英国678频道：@jichangdl
-      - 英国225频道：@jichangdl
       - 德国577频道：@jichangdl
       - 德国153频道：@jichangdl
       - 🇬🇧GB_43
-      - 英国797频道：@jichangdl
       - 德国550频道：@jichangdl
       - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
       - 波兰966频道：@jichangdl
-      - 🇳🇱荷兰|NLD
       - 德国117频道：@jichangdl
       - NL荷兰(mibei77.com米贝节点分享)
       - GB英国(mibei77.com米贝节点分享)_1
       - 🇬🇧GB_39
-      - 🇬🇧GB-82.38.31.89-0189
       - 英国269频道：@jichangdl
       - GB英国(mibei77.com米贝节点分享)_2
       - 英国(yudou789.top玉豆免费节点)_1
-      - 英国273频道：@jichangdl
       - 德国907频道：@jichangdl
-      - 瑞士43频道：@jichangdl
       - 英国557频道：@jichangdl
       - 英国806频道：@jichangdl
       - 英国778频道：@jichangdl
       - 美国(yudou789.top玉豆免费节点)_1
-      - 荷兰693频道：@jichangdl
-      - 德国591频道：@jichangdl
       - US美国(mibei77.com米贝节点分享)_1
       - 英国316频道：@jichangdl_2
       - 英国732频道：@jichangdl
@@ -459,55 +501,67 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vless-ws-tls-argo-germany
-      - vless-runmyapp
+      - 联通-SJC-443-WS-TLS-01
+      - 联通-LAX-443-WS-TLS-03
+      - 联通-LAX-80-WS-08
+      - 移动-HKG-443-WS-TLS-03
+      - 联通-SJC-80-WS-02
+      - 联通-LAX-443-WS-TLS-05
+      - 联通-LAX-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-07
+      - 联通-LAX-80-WS-06
+      - 电信-SIN-80-WS-02
+      - 电信-SIN-80-WS-06
+      - 移动-HKG-80-WS-08
+      - 移动-HKG-80-WS-10
+      - 联通-LAX-80-WS-04
+      - 电信-SIN-80-WS-04
+      - 电信-SIN-80-WS-08
+      - 电信-SIN-443-WS-TLS-03
+      - 移动-HKG-80-WS-04
+      - 联通-LAX-80-WS-02
+      - 电信-SIN-443-WS-TLS-05
+      - 电信-SIN-80-WS-10
+      - 联通-LAX-443-WS-TLS-01
+      - 移动-HKG-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-05
+      - 电信-SIN-443-WS-TLS-01
+      - 移动-HKG-80-WS-06
+      - 移动-HKG-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-01
+      - 移动-HKG-80-WS-02
+      - vless-ws-tls-argo-enc-vision-CT600
+      - vless-ws-argo-enc-vision-CT600
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 随机30频道：@jichangdl
       - 🇬🇧GB_41
-      - 香港533频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0231
-      - 香港89频道：@jichangdl
-      - 美国715频道：@jichangdl
-      - 德国855频道：@jichangdl
-      - 美国383频道：@jichangdl
-      - 荷兰450频道：@jichangdl
-      - 马来西亚589频道：@jichangdl
       - 英国316频道：@jichangdl_1
       - 美国49频道：@jichangdl
       - 英国319频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0199
       - 德国567频道：@jichangdl
       - 英国678频道：@jichangdl
-      - 英国225频道：@jichangdl
       - 德国577频道：@jichangdl
       - 德国153频道：@jichangdl
       - 🇬🇧GB_43
-      - 英国797频道：@jichangdl
       - 德国550频道：@jichangdl
       - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
       - 波兰966频道：@jichangdl
-      - 🇳🇱荷兰|NLD
       - 德国117频道：@jichangdl
       - NL荷兰(mibei77.com米贝节点分享)
       - GB英国(mibei77.com米贝节点分享)_1
       - 🇬🇧GB_39
-      - 🇬🇧GB-82.38.31.89-0189
       - 英国269频道：@jichangdl
       - GB英国(mibei77.com米贝节点分享)_2
       - 英国(yudou789.top玉豆免费节点)_1
-      - 英国273频道：@jichangdl
       - 德国907频道：@jichangdl
-      - 瑞士43频道：@jichangdl
       - 英国557频道：@jichangdl
       - 英国806频道：@jichangdl
       - 英国778频道：@jichangdl
       - 美国(yudou789.top玉豆免费节点)_1
-      - 荷兰693频道：@jichangdl
-      - 德国591频道：@jichangdl
       - US美国(mibei77.com米贝节点分享)_1
       - 英国316频道：@jichangdl_2
       - 英国732频道：@jichangdl
@@ -534,8 +588,38 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vless-ws-tls-argo-germany
-      - vless-runmyapp
+      - 联通-SJC-443-WS-TLS-01
+      - 联通-LAX-443-WS-TLS-03
+      - 联通-LAX-80-WS-08
+      - 移动-HKG-443-WS-TLS-03
+      - 联通-SJC-80-WS-02
+      - 联通-LAX-443-WS-TLS-05
+      - 联通-LAX-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-07
+      - 联通-LAX-80-WS-06
+      - 电信-SIN-80-WS-02
+      - 电信-SIN-80-WS-06
+      - 移动-HKG-80-WS-08
+      - 移动-HKG-80-WS-10
+      - 联通-LAX-80-WS-04
+      - 电信-SIN-80-WS-04
+      - 电信-SIN-80-WS-08
+      - 电信-SIN-443-WS-TLS-03
+      - 移动-HKG-80-WS-04
+      - 联通-LAX-80-WS-02
+      - 电信-SIN-443-WS-TLS-05
+      - 电信-SIN-80-WS-10
+      - 联通-LAX-443-WS-TLS-01
+      - 移动-HKG-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-05
+      - 电信-SIN-443-WS-TLS-01
+      - 移动-HKG-80-WS-06
+      - 移动-HKG-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-01
+      - 移动-HKG-80-WS-02
+      - vless-ws-tls-argo-enc-vision-CT600
+      - vless-ws-argo-enc-vision-CT600
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -558,48 +642,30 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 随机30频道：@jichangdl
       - 🇬🇧GB_41
-      - 香港533频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0231
-      - 香港89频道：@jichangdl
-      - 美国715频道：@jichangdl
-      - 德国855频道：@jichangdl
-      - 美国383频道：@jichangdl
-      - 荷兰450频道：@jichangdl
-      - 马来西亚589频道：@jichangdl
       - 英国316频道：@jichangdl_1
       - 美国49频道：@jichangdl
       - 英国319频道：@jichangdl
-      - 🇬🇧GB-82.38.31.217-0199
       - 德国567频道：@jichangdl
       - 英国678频道：@jichangdl
-      - 英国225频道：@jichangdl
       - 德国577频道：@jichangdl
       - 德国153频道：@jichangdl
       - 🇬🇧GB_43
-      - 英国797频道：@jichangdl
       - 德国550频道：@jichangdl
       - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
       - 波兰966频道：@jichangdl
-      - 🇳🇱荷兰|NLD
       - 德国117频道：@jichangdl
       - NL荷兰(mibei77.com米贝节点分享)
       - GB英国(mibei77.com米贝节点分享)_1
       - 🇬🇧GB_39
-      - 🇬🇧GB-82.38.31.89-0189
       - 英国269频道：@jichangdl
       - GB英国(mibei77.com米贝节点分享)_2
       - 英国(yudou789.top玉豆免费节点)_1
-      - 英国273频道：@jichangdl
       - 德国907频道：@jichangdl
-      - 瑞士43频道：@jichangdl
       - 英国557频道：@jichangdl
       - 英国806频道：@jichangdl
       - 英国778频道：@jichangdl
       - 美国(yudou789.top玉豆免费节点)_1
-      - 荷兰693频道：@jichangdl
-      - 德国591频道：@jichangdl
       - US美国(mibei77.com米贝节点分享)_1
       - 英国316频道：@jichangdl_2
       - 英国732频道：@jichangdl
@@ -626,8 +692,38 @@ proxy-groups:
       - 美国(yudou789.top玉豆免费节点)_2
       - 美国342频道：@jichangdl
       - 韩国643频道：@jichangdl
-      - 4k线路vless-ws-tls-argo-germany
-      - vless-runmyapp
+      - 联通-SJC-443-WS-TLS-01
+      - 联通-LAX-443-WS-TLS-03
+      - 联通-LAX-80-WS-08
+      - 移动-HKG-443-WS-TLS-03
+      - 联通-SJC-80-WS-02
+      - 联通-LAX-443-WS-TLS-05
+      - 联通-LAX-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-07
+      - 联通-LAX-80-WS-06
+      - 电信-SIN-80-WS-02
+      - 电信-SIN-80-WS-06
+      - 移动-HKG-80-WS-08
+      - 移动-HKG-80-WS-10
+      - 联通-LAX-80-WS-04
+      - 电信-SIN-80-WS-04
+      - 电信-SIN-80-WS-08
+      - 电信-SIN-443-WS-TLS-03
+      - 移动-HKG-80-WS-04
+      - 联通-LAX-80-WS-02
+      - 电信-SIN-443-WS-TLS-05
+      - 电信-SIN-80-WS-10
+      - 联通-LAX-443-WS-TLS-01
+      - 移动-HKG-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-05
+      - 电信-SIN-443-WS-TLS-01
+      - 移动-HKG-80-WS-06
+      - 移动-HKG-443-WS-TLS-07
+      - 电信-SIN-443-WS-TLS-09
+      - 移动-HKG-443-WS-TLS-01
+      - 移动-HKG-80-WS-02
+      - vless-ws-tls-argo-enc-vision-CT600
+      - vless-ws-argo-enc-vision-CT600
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
